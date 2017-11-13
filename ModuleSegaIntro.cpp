@@ -54,7 +54,10 @@ bool ModuleSegaIntro::CleanUp()
 
 update_status ModuleSegaIntro::Update()
 {
-	App->renderer->Blit(graphics, (384-207)/2 , (224-74)/2 , &(sega.GetCurrentFrame()), 1.0f);
-
+	
+		App->renderer->Blit(graphics, (384 - 207) / 2, (224 - 74) / 2, &(sega.GetCurrentFrame()), 1.0f);
+	/*	if (SDLK_SPACE) {
+			App->fade->FadeToBlack()
+	}*/
 	return UPDATE_CONTINUE;
 }
