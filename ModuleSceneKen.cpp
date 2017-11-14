@@ -15,10 +15,10 @@
 ModuleSceneKen::ModuleSceneKen(bool start_enabled) : Module(start_enabled)
 {
 	// start flag
-	startflag.x = 0;
+	/*startflag.x = 0;
 	startflag.y = 2;
 	startflag.w = 276;
-	startflag.h = 78;
+	startflag.h = 78;*/
 
 	
 
@@ -71,7 +71,7 @@ bool ModuleSceneKen::CleanUp()
 {
 	LOG("Unloading ken scene");
 
-	App->textures->Unload(graphics);
+//	App->textures->Unload(graphics);
 	App->player->Disable();
 	
 	return true;
@@ -88,7 +88,7 @@ update_status ModuleSceneKen::Update()
 
 	//// Draw everything --------------------------------------
 	//// TODO 1: Tweak the movement speed of the sea&sky + flag to your taste
-	App->renderer->Blit(graphics, 0, 0, &startflag, 0.7f); // sea and sky
+	//App->renderer->Blit(graphics, 0, 0, &startflag, 0.7f); // sea and sky
 	//App->renderer->Blit(graphics, 560, 8, &(flag.GetCurrentFrame()), 0.7f); // flag animation
 
 	//// TODO 3: Draw the ship. Be sure to tweak the speed.

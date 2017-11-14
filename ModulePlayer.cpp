@@ -9,8 +9,11 @@
 // Reference at https://www.youtube.com/watch?v=OEhmUuehGOA
 ModulePlayer::ModulePlayer(bool start_enabled) : Module(start_enabled)
 {
-	
+	position.x = 100;
+	position.y = 200;
 
+	idleferrari.frames.push_back({ 207,198,77,40 });
+	
 }
 
 ModulePlayer::~ModulePlayer()
@@ -23,7 +26,7 @@ bool ModulePlayer::Start()
 {
 	LOG("Loading player");
 
-//	graphics = App->textures->Load("Ferrari1.png"); // arcade version
+	graphics = App->textures->Load("player.png"); // arcade version
 
 
 	return true;
@@ -46,8 +49,8 @@ update_status ModulePlayer::Update()
 	// make sure to detect player movement and change its
 	// position while cycling the animation(check Animation.h)
 
-	//App->renderer->Blit(graphics, position.x, 120, &Ferrari);
-
+	App->renderer->Blit(graphics, position.x, position.y, &(idleferrari.GetCurrentFrame()), 1.0f);
+	
 	/*if (App->input->GetKey(SDLK_RIGHT)) {
 		App->renderer->Blit(graphics, position.x, position.y-90, &(forward.GetCurrentFrame()), 1.0f);
 		position.x = position.x + 2;

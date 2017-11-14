@@ -3,6 +3,8 @@
 #include "Application.h"
 #include "ModuleFadeToBlack.h"
 #include "ModuleRender.h"
+#include"ModuleSceneKen.h"
+#include "ModuleSegaIntro.h"
 #include "SDL/include/SDL.h"
 
 ModuleFadeToBlack::ModuleFadeToBlack(bool start_enabled) :  Module(start_enabled)

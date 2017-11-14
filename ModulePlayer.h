@@ -21,11 +21,15 @@ public:
 public:
 
 	SDL_Texture* graphics = nullptr;
-	Animation idle;
-	Animation backward;
-	Animation forward;
+	Animation idleferrari;
+	Animation idlepilot;
+	Animation idlegirl;
+	//Animation backward;
+	//Animation forward;
 	iPoint position;
-	SDL_Rect Ferrari;
+	//SDL_Rect Ferrari;
+	//SDL_Rect Pilot;
+	//SDL_Rect Girl;
 };
 
 #endif // __MODULEPLAYER_H__
