@@ -46,9 +46,6 @@
     <ClInclude Include="Point.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="ModuleSceneKen.h">
-      <Filter>Game Modules</Filter>
-    </ClInclude>
     <ClInclude Include="ModulePlayer.h">
       <Filter>Game Modules</Filter>
     </ClInclude>
@@ -56,6 +53,9 @@
       <Filter>Core Modules</Filter>
     </ClInclude>
     <ClInclude Include="ModuleSegaIntro.h">
+      <Filter>Game Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleScene.h">
       <Filter>Game Modules</Filter>
     </ClInclude>
   </ItemGroup>
@@ -84,9 +84,6 @@
     <ClCompile Include="Log.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="ModuleSceneKen.cpp">
-      <Filter>Game Modules</Filter>
-    </ClCompile>
     <ClCompile Include="ModulePlayer.cpp">
       <Filter>Game Modules</Filter>
     </ClCompile>
@@ -94,6 +91,12 @@
       <Filter>Core Modules</Filter>
     </ClCompile>
     <ClCompile Include="ModuleSegaIntro.cpp">
+      <Filter>Game Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleScene.cpp">
+      <Filter>Game Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Unusedcode.cpp">
       <Filter>Game Modules</Filter>
     </ClCompile>
   </ItemGroup>

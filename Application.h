@@ -12,7 +12,7 @@ class ModuleInput;
 class ModuleAudio;
 class ModuleFadeToBlack;
 class ModulePlayer;
-class ModuleSceneKen;
+class ModuleScene;
 class ModuleSegaIntro;
 class Application
 {
@@ -33,7 +33,7 @@ public:
 	ModuleAudio* audio;
 	ModuleFadeToBlack* fade;
 	ModulePlayer* player;
-	ModuleSceneKen* scene_ken;
+	ModuleScene* scene_ken;
 	ModuleSegaIntro* sega_intro;
 
 private:

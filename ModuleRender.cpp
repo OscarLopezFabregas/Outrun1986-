@@ -4,6 +4,8 @@
 #include "ModuleWindow.h"
 #include "ModuleInput.h"
 #include "SDL/include/SDL.h"
+#include "SDL\include\SDL2_gfxPrimitives.c"
+#include "SDL\include\SDL2_rotozoom.c"
 
 ModuleRender::ModuleRender()
 {
@@ -113,6 +115,16 @@ bool ModuleRender::Blit(SDL_Texture* texture, int x, int y, SDL_Rect* section, f
 		LOG("Cannot blit to screen. SDL_RenderCopy error: %s", SDL_GetError());
 		ret = false;
 	}
+
+	return ret;
+}
+
+bool ModuleRender::BlitPolygon(int x1, int y1, int w1, int x2, int y2, int w2, int r, int g, int b)
+{
+	bool ret = true;
+	Sint16 s[4] = { x1 - (w1),x1 + (w1),x2 + (w2), x2 - (w2) };
+	Sint16 t[4] = { y1,y1,y2,y2 };
+	filledPolygonRGBA(renderer,s, t,4, r, g, b, 255);
 
 	return ret;
 }

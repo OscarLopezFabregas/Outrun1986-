@@ -5,7 +5,7 @@
 #include "ModuleInput.h"
 #include "ModuleAudio.h"
 #include "ModuleFadeToBlack.h"
-#include "ModuleSceneKen.h"
+#include "ModuleScene.h"
 #include "ModulePlayer.h"
 #include "ModuleSegaIntro.h"
 
@@ -23,7 +23,7 @@ Application::Application()
 
 	// Game Modules
 	modules.push_back(sega_intro = new ModuleSegaIntro(false));
-    modules.push_back(scene_ken = new ModuleSceneKen(false));
+    modules.push_back(scene_ken = new ModuleScene(false));
 	modules.push_back(player = new ModulePlayer(false));
 	modules.push_back(fade = new ModuleFadeToBlack());
 }

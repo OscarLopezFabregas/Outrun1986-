@@ -7,7 +7,7 @@
 #include "ModuleAudio.h"
 #include "ModuleSegaIntro.h"
 #include "ModuleFadeToBlack.h"
-#include "ModuleSceneKen.h"
+#include "ModuleScene.h"
 #include "SDL/include/SDL.h"
 
 
@@ -57,7 +57,7 @@ bool ModuleSegaIntro::CleanUp()
 update_status ModuleSegaIntro::Update()
 {
 	
-		App->renderer->Blit(graphics, (384 - 207) / 2, (224 - 74) / 2, &(sega.GetCurrentFrame()), 1.0f);
+		App->renderer->Blit(graphics, (SCREEN_WIDTH - 207) / 2, (SCREEN_HEIGHT - 74) / 2, &(sega.GetCurrentFrame()), 1.0f);
 
 		if (App->input->GetKey(SDL_SCANCODE_SPACE)) {			
 			App->fade->FadeToBlack(App->scene_ken, App->sega_intro, 1.0f);

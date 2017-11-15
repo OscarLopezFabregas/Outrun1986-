@@ -24,6 +24,9 @@ public:
 	Animation idleferrari;
 	Animation idlepilot;
 	Animation idlegirl;
+	int playerX; //unused
+	int playerZ; //unused 
+	double speed; //unused
 	//Animation backward;
 	//Animation forward;
 	iPoint position;

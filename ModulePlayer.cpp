@@ -9,10 +9,11 @@
 // Reference at https://www.youtube.com/watch?v=OEhmUuehGOA
 ModulePlayer::ModulePlayer(bool start_enabled) : Module(start_enabled)
 {
-	position.x = 100;
-	position.y = 200;
+	position.x = 157;
+	position.y = 178;
 
 	idleferrari.frames.push_back({ 207,198,77,40 });
+
 	
 }
 
