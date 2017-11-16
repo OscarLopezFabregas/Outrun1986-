@@ -24,7 +24,7 @@ public:
 	Animation idleferrari;
 	Animation idlepilot;
 	Animation idlegirl;
-	int playerX; //unused
+	int playerX = 1; //unused
 	int playerZ; //unused 
 	double speed; //unused
 	//Animation backward;

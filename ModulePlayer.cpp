@@ -9,8 +9,8 @@
 // Reference at https://www.youtube.com/watch?v=OEhmUuehGOA
 ModulePlayer::ModulePlayer(bool start_enabled) : Module(start_enabled)
 {
-	position.x = 157;
-	position.y = 178;
+	position.x = ((SCREEN_WIDTH*SCREEN_SIZE)-35)/2;
+	position.y = (SCREEN_HEIGHT*SCREEN_SIZE) - 40;
 
 	idleferrari.frames.push_back({ 207,198,77,40 });
 
@@ -52,12 +52,11 @@ update_status ModulePlayer::Update()
 
 	App->renderer->Blit(graphics, position.x, position.y, &(idleferrari.GetCurrentFrame()), 1.0f);
 	
-	/*if (App->input->GetKey(SDLK_RIGHT)) {
-		App->renderer->Blit(graphics, position.x, position.y-90, &(forward.GetCurrentFrame()), 1.0f);
-		position.x = position.x + 2;
+	if (App->input->GetKey(SDLK_UP)) {
+		playerX += 200;
 	}
 	
-	else if (App->input->GetKey(SDLK_LEFT)) {
+	/*else if (App->input->GetKey(SDLK_LEFT)) {
 		App->renderer->Blit(graphics, position.x, position.y - 90, &(backward.GetCurrentFrame()), 1.0f);
 		position.x = position.x - 1.5;
 	}

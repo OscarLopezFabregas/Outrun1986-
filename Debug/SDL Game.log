@@ -1,9 +1,5 @@
-﻿  ModuleScene.cpp
-c:\users\pc\desktop\outrun1986-\modulescene.h(42): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-c:\users\pc\desktop\outrun1986-\modulescene.cpp(96): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\pc\desktop\outrun1986-\modulescene.cpp(121): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\pc\desktop\outrun1986-\modulescene.cpp(122): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\pc\desktop\outrun1986-\modulescene.cpp(122): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\pc\desktop\outrun1986-\modulescene.cpp(123): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  SDL Game.vcxproj -> C:\Users\PC\Desktop\Outrun1986-\Debug\SDL Game - Master 1 Handout.exe
-  SDL Game.vcxproj -> C:\Users\PC\Desktop\Outrun1986-\Debug\SDL Game - Master 1 Handout.pdb (Partial PDB)
+﻿  ModuleRender.cpp
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulerender.cpp(125): warning C4838: la conversión de 'int' en 'Sint16' requiere una conversión de restricción
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulerender.cpp(126): warning C4838: la conversión de 'int' en 'Sint16' requiere una conversión de restricción
+  SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Debug\SDL Game - Master 1 Handout.exe
+  SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Debug\SDL Game - Master 1 Handout.pdb (Partial PDB)

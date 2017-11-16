@@ -99,18 +99,12 @@ update_status ModuleScene::Update()
 	
 	}
 	int N = lines.size();
-//
-////DIBUIXEM!!//
-//
-	int grass[3];
-	int rumble[3];
-	int road[3];
-//
-	App->renderer->BlitPolygon(500, 500, 200, 500, 300, 100, 0, 255, 0);
-	for (int n = 1; n < 300; n++)
+	pos = App->player->playerX / segL;
+	
+	for (int n = 1+pos; n <pos+300; n++)
 	{
 		Line &l = lines[n%N];
-		l.project(0, 1500, 0);
+		l.project(0, 1500, App->player->playerX);
 //		
 		(n / 3) % 2 ? (grass[0] = 16, grass[1] = 200, grass[2] = 16) : (grass[0] = 0, grass[1] = 154, grass[2] = 0);
 		(n / 3) % 2 ? (rumble[0] = 255, rumble[1] = 255, rumble[2] = 255) : (rumble[0] = 0, rumble[1] = 0, rumble[2] = 0);

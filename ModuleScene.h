@@ -40,7 +40,10 @@ public:
 	int roadW = 2000;
 	int segL = 200; //segment length
     float camD = 0.84; //camera depth
-	
+	int grass[3];
+	int rumble[3];
+	int road[3];
+	int pos;
 
 	
 	std::vector<Line> lines;
