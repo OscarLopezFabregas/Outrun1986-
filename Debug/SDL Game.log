@@ -1,5 +1,6 @@
-﻿  ModuleRender.cpp
-c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulerender.cpp(125): warning C4838: la conversión de 'int' en 'Sint16' requiere una conversión de restricción
-c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulerender.cpp(126): warning C4838: la conversión de 'int' en 'Sint16' requiere una conversión de restricción
-  SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Debug\SDL Game - Master 1 Handout.exe
-  SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Debug\SDL Game - Master 1 Handout.pdb (Partial PDB)
+﻿  ModuleSegaIntro.cpp
+c:\users\pc\desktop\outrun1986-\modulescene.h(8): warning C4099: 'SDL_Texture': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+  c:\users\pc\desktop\outrun1986-\modulesegaintro.h(9): note: vea la declaración de 'SDL_Texture'
+c:\users\pc\desktop\outrun1986-\modulesegaintro.cpp(60): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+  SDL Game.vcxproj -> C:\Users\PC\Desktop\Outrun1986-\Debug\SDL Game - Master 1 Handout.exe
+  SDL Game.vcxproj -> C:\Users\PC\Desktop\Outrun1986-\Debug\SDL Game - Master 1 Handout.pdb (Partial PDB)

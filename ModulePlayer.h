@@ -24,15 +24,13 @@ public:
 	Animation idleferrari;
 	Animation idlepilot;
 	Animation idlegirl;
-	int playerX = 1; //unused
-	int playerZ; //unused 
+	float playerX = 0;
+	float playerZ = 0;
 	double speed; //unused
 	//Animation backward;
 	//Animation forward;
 	iPoint position;
-	//SDL_Rect Ferrari;
-	//SDL_Rect Pilot;
-	//SDL_Rect Girl;
+
 };
 
 #endif // __MODULEPLAYER_H__

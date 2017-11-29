@@ -28,8 +28,8 @@ bool ModulePlayer::Start()
 	LOG("Loading player");
 
 	graphics = App->textures->Load("player.png"); // arcade version
-
-
+	
+	
 	return true;
 }
 
@@ -50,18 +50,20 @@ update_status ModulePlayer::Update()
 	// make sure to detect player movement and change its
 	// position while cycling the animation(check Animation.h)
 
-	App->renderer->Blit(graphics, position.x, position.y, &(idleferrari.GetCurrentFrame()), 1.0f);
+	App->renderer->Blit(graphics, position.x, position.y, &(idleferrari.GetCurrentFrame()), 1.0f, -1,-1);
 	
 	if (App->input->GetKey(SDLK_UP)) {
 		playerX += 200;
 	}
-	
-	/*else if (App->input->GetKey(SDLK_LEFT)) {
-		App->renderer->Blit(graphics, position.x, position.y - 90, &(backward.GetCurrentFrame()), 1.0f);
-		position.x = position.x - 1.5;
+	if (App->input->GetKey(SDLK_RIGHT))
+	{
+		playerZ += 200;
 	}
-	else {
-		App->renderer->Blit(graphics, position.x, position.y - 90, &(idle.GetCurrentFrame()), 1.0f);
-	}*/
+	if (App->input->GetKey(SDLK_LEFT))
+	{
+		playerZ -= 200;
+	}
+
+
 	return UPDATE_CONTINUE;
 }

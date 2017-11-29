@@ -2,7 +2,6 @@
 #include "Application.h"
 #include "ModuleRender.h"
 #include "ModuleTextures.h"
-#include "ModulePlayer.h"
 #include "ModuleInput.h"
 #include "ModuleAudio.h"
 #include "ModuleSegaIntro.h"
@@ -21,7 +20,7 @@ ModuleSegaIntro::ModuleSegaIntro(bool start_enabled) : Module(start_enabled)
 	}
 			
 
-	sega.speed = 0.15f;
+	sega.speed = 0.05f;
 	
 }
 
@@ -57,10 +56,11 @@ bool ModuleSegaIntro::CleanUp()
 update_status ModuleSegaIntro::Update()
 {
 	
-		App->renderer->Blit(graphics, (SCREEN_WIDTH - 207) / 2, (SCREEN_HEIGHT - 74) / 2, &(sega.GetCurrentFrame()), 1.0f);
+		App->renderer->Blit(graphics, (SCREEN_WIDTH - 1.5*sega.GetCurrentFrame().w) / 2, (SCREEN_HEIGHT - 1.5*sega.GetCurrentFrame().h) / 2.5, &(sega.GetCurrentFrame()), 1.0f, 
+			1.5*sega.GetCurrentFrame().w,1.5* sega.GetCurrentFrame().h);
 
 		if (App->input->GetKey(SDL_SCANCODE_SPACE)) {			
-			App->fade->FadeToBlack(App->scene_ken, App->sega_intro, 1.0f);
+			App->fade->FadeToBlack((Module*)App->outrun_start, App->sega_intro, 1.0f);
 		}
 
 	return UPDATE_CONTINUE;

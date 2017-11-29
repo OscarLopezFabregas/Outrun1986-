@@ -20,8 +20,8 @@ public:
 	update_status PostUpdate();
 	bool CleanUp();
 
-	bool Blit(SDL_Texture* texture, int x, int y, SDL_Rect* section, float speed = 1.0f);
-	bool BlitPolygon( int x1, int y1, int w1, int x2, int y2, int w2, int r, int g, int b); //include renderer?
+	bool Blit(SDL_Texture* texture, int x, int y, SDL_Rect* section, float speed = 1.0f, int scaledW = -1, int scaledH = -1);
+	bool BlitPolygon(Color c, int x1, int y1, int w1, int x2, int y2, int w2); //include renderer?
 
 public:
 	SDL_Renderer* renderer = nullptr;

@@ -7,6 +7,7 @@ class Animation
 {
 public:
 	float speed;
+	
 	vector<SDL_Rect> frames;
 
 private:

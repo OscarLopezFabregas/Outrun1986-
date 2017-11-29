@@ -58,6 +58,15 @@
     <ClInclude Include="ModuleScene.h">
       <Filter>Game Modules</Filter>
     </ClInclude>
+    <ClInclude Include="Line.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleBeachTrack.h">
+      <Filter>Game Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleStart.h">
+      <Filter>Game Modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -96,7 +105,10 @@
     <ClCompile Include="ModuleScene.cpp">
       <Filter>Game Modules</Filter>
     </ClCompile>
-    <ClCompile Include="Unusedcode.cpp">
+    <ClCompile Include="ModuleBeachTrack.cpp">
+      <Filter>Game Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleStart.cpp">
       <Filter>Game Modules</Filter>
     </ClCompile>
   </ItemGroup>

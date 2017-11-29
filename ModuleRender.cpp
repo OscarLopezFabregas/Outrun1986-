@@ -90,7 +90,7 @@ bool ModuleRender::CleanUp()
 }
 
 // Blit to screen
-bool ModuleRender::Blit(SDL_Texture* texture, int x, int y, SDL_Rect* section, float speed)
+bool ModuleRender::Blit(SDL_Texture* texture, int x, int y, SDL_Rect* section, float speed, int scaledW, int scaledH)
 {
 	bool ret = true;
 	SDL_Rect rect;
@@ -106,6 +106,10 @@ bool ModuleRender::Blit(SDL_Texture* texture, int x, int y, SDL_Rect* section, f
 	{
 		SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
 	}
+	if (scaledW != -1 && scaledH != -1) {
+		rect.w = scaledW; rect.h = scaledH;
+	}
+	
 
 	rect.w *= SCREEN_SIZE;
 	rect.h *= SCREEN_SIZE;
@@ -119,12 +123,12 @@ bool ModuleRender::Blit(SDL_Texture* texture, int x, int y, SDL_Rect* section, f
 	return ret;
 }
 
-bool ModuleRender::BlitPolygon(int x1, int y1, int w1, int x2, int y2, int w2, int r, int g, int b)
+bool ModuleRender::BlitPolygon(Color c, int x1, int y1, int w1, int x2, int y2, int w2)
 {
 	bool ret = true;
-	Sint16 s[4] = { x1 - (w1),x1 + (w1),x2 + (w2), x2 - (w2) };
-	Sint16 t[4] = { y1,y1,y2,y2 };
-	filledPolygonRGBA(renderer,s, t,4, r, g, b, 255);
+	short s[4] = { x1 - (w1),x1 + (w1),x2 + (w2), x2 - (w2) };
+	short t[4] = { y1,y1,y2,y2 };
+	filledPolygonRGBA(renderer,s, t,4, c.r, c.g, c.b, 255);
 
 	return ret;
 }

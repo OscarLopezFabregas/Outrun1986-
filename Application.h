@@ -14,6 +14,8 @@ class ModuleFadeToBlack;
 class ModulePlayer;
 class ModuleScene;
 class ModuleSegaIntro;
+class ModuleStart;
+
 class Application
 {
 public:
@@ -33,7 +35,8 @@ public:
 	ModuleAudio* audio;
 	ModuleFadeToBlack* fade;
 	ModulePlayer* player;
-	ModuleScene* scene_ken;
+	ModuleScene* scene;
+	ModuleStart* outrun_start;
 	ModuleSegaIntro* sega_intro;
 
 private:

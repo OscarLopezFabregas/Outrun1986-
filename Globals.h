@@ -14,6 +14,19 @@ enum update_status
 	UPDATE_ERROR
 };
 
+struct Color {
+	int r;
+	int g;
+	int b;
+	int a;
+	Color() { r = 0; g = 0; b = 0; a = 0; }
+	Color(int red, int green, int blue, int alpha) {
+		r = red, g = green, b = blue, a = alpha;
+	}
+};
+
+
+
 // Deletes a buffer
 #define RELEASE( x ) \
     {\
@@ -35,10 +48,14 @@ enum update_status
 	 }
 
 // Configuration -----------
-#define SCREEN_WIDTH 1024
-#define SCREEN_HEIGHT 768
+#define SCREEN_WIDTH 648
+#define SCREEN_HEIGHT 480
 #define SCREEN_SIZE 1
 #define FULLSCREEN false
+
+#define SEGMENT_LENGTH 200
+#define CAMERA_DEPTH 0.84
+#define ROAD_WIDTH 2000;
 #define FPS 60
 #define VSYNC true
 #define TITLE "Outrun 1986"

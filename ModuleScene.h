@@ -1,53 +1,54 @@
-#ifndef __MODULESCENEKEN_H__
-#define __MODULESCENEKEN_H__
+#ifndef __MODULESCENE_H__
+#define __MODULESCENE_H__
 
 #include "Module.h"
 #include "Animation.h"
-#include "Globals.h"
-
-struct SDL_Texture;
-
-struct Line
-{
-public:
-	Line() { x = y = z = 0; };
-	~Line();
-	float x, y, z; //3d center of line
-	float X, Y, W; //screen coord
-	float scale;
-	//from world to screen coordinates;
-	void project(int camX, int camY, int camZ);
-};
 
 
-
+ class SDL_Texture;
+ class Line; 
 
 class ModuleScene : public Module
 {
 public:
-	ModuleScene( bool start_enabled = false);
+	ModuleScene( bool start_enabled = true);
 	~ModuleScene();
 
 	bool Start();
 	update_status Update();
+	/*update_status PostUpdate();*/
 	bool CleanUp();
 	
 
 public:
 	
 	SDL_Texture* graphics = nullptr;
+
+
+
+
 	int lanes = 3;
-	int roadW = 2000;
-	int segL = 200; //segment length
-    float camD = 0.84; //camera depth
 	int grass[3];
 	int rumble[3];
 	int road[3];
+	int startPos;
 	int pos;
+	int N;
+	int playerX;
+	int playerZ = 0;
+	Color grass1;
+	Color grass2;
+	Color rumble1;
+	Color rumble2;
+	Color road1;
+	Color road2;
+
+	std::vector<Line> lines;
+private:
+	void PrintTrack();
 
 	
-	std::vector<Line> lines;
 	
 };
 
-#endif // __MODULESCENEKEN_H__
+#endif // __MODULESCENE_H__
