@@ -5,13 +5,20 @@
 #include "ModuleScene.h"
 #include "Globals.h"
 
+
+
+
+
 class ModuleBeachTrack : public ModuleScene
 {
 
 public:
-	ModuleBeachTrack();
-	
+	ModuleBeachTrack(bool start_enabled = true);
+	bool Start();
 	~ModuleBeachTrack();
+public:
+	
+	SDL_Rect StartBanner;
 
 };
 

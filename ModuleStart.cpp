@@ -12,12 +12,12 @@
 ModuleStart::ModuleStart(bool start_enabled) : Module(start_enabled)
 {
 	//Outrun Logo Start
-	OutrunStart.frames.push_back({ 55,38,176,86 });
-	OutrunStart.frames.push_back({ 236,38,176,86 });
-	OutrunStart.frames.push_back({ 417,38,176,86 });
-	OutrunStart.frames.push_back({ 55,131,176,86 });
-	OutrunStart.frames.push_back({ 237,131,176,86 });
-	OutrunStart.frames.push_back({ 417,131,176,86 });
+	OutrunStart.frames.push_back({ 55,38,176,88 });
+	OutrunStart.frames.push_back({ 236,38,176, 88});
+	OutrunStart.frames.push_back({ 417,38,176,88 });
+	OutrunStart.frames.push_back({ 55,131,176,88 });
+	OutrunStart.frames.push_back({ 237,131,176,88 });
+	OutrunStart.frames.push_back({ 417,131,176,88 });
 	OutrunStart.speed = 0.01f;
 
 	//Background Start
@@ -25,6 +25,12 @@ ModuleStart::ModuleStart(bool start_enabled) : Module(start_enabled)
 	Background.y = 314;
 	Background.h = 476;
 	Background.w = 680;
+
+	//Press Start
+	PressStart.frames.push_back({ 152,260,417,33 });
+	PressStart.frames.push_back({ 1,1,417,33 });
+	PressStart.speed = 0.025f;
+
 }
 
 ModuleStart::~ModuleStart()
@@ -36,12 +42,11 @@ bool ModuleStart::Start()
 {
 	LOG("Loading Sega Intro");
 
-	graphics = App->textures->Load("StartAnimation.png");
+	graphics = App->textures->Load("Sprites/StartAnimation.png");
 
-	//// TODO 7: Enable the player module
-
-	//// TODO 0: trigger background music
-	//App->audio->PlayMusic("ken.ogg");
+	
+	App->audio->PlayMusic("Music/Magical_Sound_Shower.ogg", 0.f);
+	
 
 	return true;
 }
@@ -51,7 +56,7 @@ bool ModuleStart::CleanUp()
 	LOG("Unloading Sega Intro");
 
 	App->textures->Unload(graphics);
-
+	
 
 	return true;
 }
@@ -60,11 +65,14 @@ update_status ModuleStart::Update()
 {
 	App->renderer->Blit(graphics, 0, 0, &Background, 1.0f,SCREEN_WIDTH,SCREEN_HEIGHT);
 
-	App->renderer->Blit(graphics, (SCREEN_WIDTH - 2*OutrunStart.GetCurrentFrame().w) / 2, (SCREEN_HEIGHT - 2*OutrunStart.GetCurrentFrame().h) / 3,
+	App->renderer->Blit(graphics, (SCREEN_WIDTH - 2*OutrunStart.GetCurrentFrame().w) / 2, (SCREEN_HEIGHT - 2*OutrunStart.GetCurrentFrame().h) / 1.85,
 		&(OutrunStart.GetCurrentFrame()), 0.0f, OutrunStart.GetCurrentFrame().w*2, OutrunStart.GetCurrentFrame().h*2);
 
+	App->renderer->Blit(graphics, (SCREEN_WIDTH -   209) / 2, SCREEN_HEIGHT - 115,
+		&(PressStart.GetCurrentFrame()), 0.0f, 209, 16);
+
 	if (App->input->GetKey(SDL_SCANCODE_SPACE)) {
-		App->fade->FadeToBlack((Module*)App->scene, App->outrun_start, 0.0f);
+		App->fade->FadeToBlack((Module*)App->beach_track, App->outrun_start, 0.0f);
 	}
 
 	return UPDATE_CONTINUE;

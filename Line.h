@@ -20,6 +20,8 @@ public:
 	int roadW = ROAD_WIDTH;
 	int segL = SEGMENT_LENGTH;
 	float camD = (float)CAMERA_DEPTH;
+
+	SDL_Rect rectline; 
 	
 	Line() 
 	{
@@ -40,7 +42,7 @@ public:
 		W = (float)(scale * roadW * width / 2);
 	}
 
-	void DrawObject(SDL_Rect sprite, SDL_Texture* texture, float position = 999, bool middle = false);
+	//void DrawObject(SDL_Rect sprite, SDL_Texture* texture, float position = 999, bool middle = false);
 
 };
 

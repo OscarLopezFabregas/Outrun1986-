@@ -1,6 +1,8 @@
-﻿  ModuleSegaIntro.cpp
-c:\users\pc\desktop\outrun1986-\modulescene.h(8): warning C4099: 'SDL_Texture': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
-  c:\users\pc\desktop\outrun1986-\modulesegaintro.h(9): note: vea la declaración de 'SDL_Texture'
-c:\users\pc\desktop\outrun1986-\modulesegaintro.cpp(60): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-  SDL Game.vcxproj -> C:\Users\PC\Desktop\Outrun1986-\Debug\SDL Game - Master 1 Handout.exe
-  SDL Game.vcxproj -> C:\Users\PC\Desktop\Outrun1986-\Debug\SDL Game - Master 1 Handout.pdb (Partial PDB)
+﻿  ModuleScene.cpp
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\line.h(7): warning C4099: 'SDL_Texture': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+  c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\sdl\include\sdl_render.h(128): note: vea la declaración de 'SDL_Texture'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulescene.cpp(67): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulescene.cpp(97): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulescene.cpp(139): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+  SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Debug\SDL Game - Master 1 Handout.exe
+  SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Debug\SDL Game - Master 1 Handout.pdb (Partial PDB)

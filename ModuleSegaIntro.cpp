@@ -33,13 +33,9 @@ bool ModuleSegaIntro::Start()
 {
 	LOG("Loading Sega Intro");
 
-	graphics = App->textures->Load("SEGA.png");
+	graphics = App->textures->Load("Sprites/SEGA.png");
 	
-	//// TODO 7: Enable the player module
 	
-	//// TODO 0: trigger background music
-	//App->audio->PlayMusic("ken.ogg");
-
 	return true;
 }
 
@@ -48,8 +44,8 @@ bool ModuleSegaIntro::CleanUp()
 	LOG("Unloading Sega Intro");
 
 	App->textures->Unload(graphics);
-   
-
+	
+	
 	return true;
 }
 

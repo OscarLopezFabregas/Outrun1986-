@@ -1,7 +1,7 @@
 #ifndef __MODULEPLAYER_H__
 #define __MODULEPLAYER_H__
 
-#include "Module.h"
+
 #include "Animation.h"
 #include "Globals.h"
 #include "Point.h"

@@ -5,8 +5,8 @@
 #include "Animation.h"
 
 
- class SDL_Texture;
  class Line; 
+ struct SDL_Texture;
 
 class ModuleScene : public Module
 {
@@ -21,11 +21,7 @@ public:
 	
 
 public:
-	
-	SDL_Texture* graphics = nullptr;
-
-
-
+	SDL_Texture* graphics2;
 
 	int lanes = 3;
 	int grass[3];

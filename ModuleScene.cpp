@@ -15,14 +15,6 @@
 
 ModuleScene::ModuleScene(bool start_enabled) : Module(start_enabled)
 {
-	grass1 = Color(242, 240, 193, 255);
-	grass2 = Color(222, 220, 180, 255);
-	rumble1 = Color(128, 128, 128, 255);
-	rumble2 = Color(225, 225, 225, 255);
-	road1 = Color(192, 192, 192, 255);
-	road2 = Color(150, 150, 150, 255);
-	pos = 0;
-	playerX = 0;
 }
 
 ModuleScene::~ModuleScene()
@@ -32,20 +24,8 @@ ModuleScene::~ModuleScene()
 bool ModuleScene::Start()
 {
 	LOG("Loading scene");
-	
+	graphics2 = App->textures->Load("Sprites/BeachTrack.png");
 	App->player->Enable();
-	for (int i = 0; i < 40000; i++)
-	{
-		Line line;
-		line.z = (float)i*line.segL;
-		if (i > 300 && i < 500) line.curve = -2;
-
-
-
-		lines.push_back(line);
-	}
-
-	N = lines.size();
 	return true;
 }
 
@@ -109,13 +89,15 @@ void ModuleScene::PrintTrack()
 			App->renderer->BlitPolygon(grass, 0, (short)p.Y, (short)p.width, 0, (short)l.Y, (short)l.width);
 			App->renderer->BlitPolygon(rumble, (short)p.X,(short)p.Y, (short)(p.W*1.2),(short)l.X,(short)l.Y,(short)(l.W*1.2));
 			App->renderer->BlitPolygon(road, (short)p.X, (short)p.Y, (short)p.W, (short)l.X, (short)l.Y, (short)l.W);
-		//	
-		//	//App->renderer->BlitPolygon(line,(short)p.X, (short)p.Y, (short)(p.W*0.05), (short)l.X, (short)l.Y, (short)(l.W*0.05));
+		   // App->renderer->BlitPolygon(line,(short)p.X, (short)p.Y, (short)(p.W*0.05), (short)l.X, (short)l.Y, (short)(l.W*0.05));
+			
+		  
 
+			//DRAW OBJECTS **EN CONSTRUCCION**
+			//App->renderer->Blit(graphics2, l.X, l.Y, &l.rectline, 1.0f, -1, -1);
+			
 	}
 	
-
-
 	//pos = App->player->playerX / segL;
 
 	//for (int n = 1 + pos; n <pos + 300; n++)

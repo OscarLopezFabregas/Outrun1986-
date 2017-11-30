@@ -2,11 +2,10 @@
 #ifndef __MODULESTART__
 #define __MODULESTART__
 
-#include "Module.h"
+
 #include "Animation.h"
 #include "Globals.h"
 
-struct SDL_Texture;
 
 class ModuleStart : public Module
 {
@@ -22,6 +21,7 @@ public:
 
 	SDL_Texture* graphics = nullptr;
 	Animation OutrunStart;
+	Animation PressStart;
 	SDL_Rect Background;
 
 

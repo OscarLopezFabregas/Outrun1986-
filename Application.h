@@ -12,7 +12,7 @@ class ModuleInput;
 class ModuleAudio;
 class ModuleFadeToBlack;
 class ModulePlayer;
-class ModuleScene;
+class ModuleBeachTrack;
 class ModuleSegaIntro;
 class ModuleStart;
 
@@ -35,7 +35,7 @@ public:
 	ModuleAudio* audio;
 	ModuleFadeToBlack* fade;
 	ModulePlayer* player;
-	ModuleScene* scene;
+	ModuleBeachTrack* beach_track;
 	ModuleStart* outrun_start;
 	ModuleSegaIntro* sega_intro;
 

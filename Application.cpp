@@ -5,9 +5,9 @@
 #include "ModuleInput.h"
 #include "ModuleAudio.h"
 #include "ModuleFadeToBlack.h"
-#include "ModuleScene.h"
 #include "ModulePlayer.h"
 #include "ModuleSegaIntro.h"
+#include "ModuleBeachTrack.h"
 #include "ModuleStart.h"
 
 using namespace std;
@@ -25,7 +25,7 @@ Application::Application()
 	// Game Modules
 	modules.push_back(sega_intro = new ModuleSegaIntro(false));
 	modules.push_back(outrun_start = new ModuleStart(false));
-	modules.push_back(scene = new ModuleScene(false));
+	modules.push_back(beach_track = new ModuleBeachTrack(false));
 	modules.push_back(player = new ModulePlayer(false));
 	modules.push_back(fade = new ModuleFadeToBlack());
 }

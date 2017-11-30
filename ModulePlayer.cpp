@@ -5,6 +5,11 @@
 #include "ModuleRender.h"
 #include "ModuleTextures.h"
 #include "SDL/include/SDL.h"
+#include "ModuleAudio.h"
+
+
+
+
 
 // Reference at https://www.youtube.com/watch?v=OEhmUuehGOA
 ModulePlayer::ModulePlayer(bool start_enabled) : Module(start_enabled)
@@ -27,7 +32,7 @@ bool ModulePlayer::Start()
 {
 	LOG("Loading player");
 
-	graphics = App->textures->Load("player.png"); // arcade version
+	graphics = App->textures->Load("Sprites/player.png"); // arcade version
 	
 	
 	return true;
@@ -50,7 +55,8 @@ update_status ModulePlayer::Update()
 	// make sure to detect player movement and change its
 	// position while cycling the animation(check Animation.h)
 
-	App->renderer->Blit(graphics, position.x, position.y, &(idleferrari.GetCurrentFrame()), 1.0f, -1,-1);
+	App->renderer->Blit(graphics, (SCREEN_WIDTH - 2 * idleferrari.GetCurrentFrame().w) /2,(SCREEN_HEIGHT- 2 * idleferrari.GetCurrentFrame().h)-5, &(idleferrari.GetCurrentFrame()), 1.0f,
+		2*idleferrari.GetCurrentFrame().w, 2*idleferrari.GetCurrentFrame().h);
 	
 	if (App->input->GetKey(SDLK_UP)) {
 		playerX += 200;
