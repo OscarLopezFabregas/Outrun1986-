@@ -27,9 +27,9 @@ ModuleStart::ModuleStart(bool start_enabled) : Module(start_enabled)
 	Background.w = 680;
 
 	//Press Start
-	PressStart.frames.push_back({ 152,260,417,33 });
-	PressStart.frames.push_back({ 1,1,417,33 });
-	PressStart.speed = 0.025f;
+	InsertCoin.frames.push_back({ 152,260,417,33 });
+	InsertCoin.frames.push_back({ 1,1,417,33 });
+	InsertCoin.speed = 0.025f;
 
 }
 
@@ -45,7 +45,7 @@ bool ModuleStart::Start()
 	graphics = App->textures->Load("Sprites/StartAnimation.png");
 
 	
-	App->audio->PlayMusic("Music/Magical_Sound_Shower.ogg", 0.f);
+	App->audio->PlayMusic("Music/Magical_Sound_Shower.ogg", 0.0f);
 	
 
 	return true;
@@ -69,10 +69,10 @@ update_status ModuleStart::Update()
 		&(OutrunStart.GetCurrentFrame()), 0.0f, OutrunStart.GetCurrentFrame().w*2, OutrunStart.GetCurrentFrame().h*2);
 
 	App->renderer->Blit(graphics, (SCREEN_WIDTH -   209) / 2, SCREEN_HEIGHT - 115,
-		&(PressStart.GetCurrentFrame()), 0.0f, 209, 16);
+		&(InsertCoin.GetCurrentFrame()), 0.0f, 209, 16);
 
 	if (App->input->GetKey(SDL_SCANCODE_SPACE)) {
-		App->fade->FadeToBlack((Module*)App->beach_track, App->outrun_start, 0.0f);
+		App->fade->FadeToBlack((Module*)App->music_select, App->outrun_start, 0.5f);
 	}
 
 	return UPDATE_CONTINUE;

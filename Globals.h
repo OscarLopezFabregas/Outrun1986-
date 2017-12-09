@@ -14,6 +14,13 @@ enum update_status
 	UPDATE_ERROR
 };
 
+enum music_selected
+{
+	LEFT,
+	IDLE,
+	RIGHT,
+};
+
 struct Color {
 	int r;
 	int g;

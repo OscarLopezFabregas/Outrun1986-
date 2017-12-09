@@ -21,7 +21,7 @@ public:
 
 	SDL_Texture* graphics = nullptr;
 	Animation OutrunStart;
-	Animation PressStart;
+	Animation InsertCoin;
 	SDL_Rect Background;
 
 

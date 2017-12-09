@@ -31,7 +31,7 @@ ModuleBeachTrack::ModuleBeachTrack(bool start_enabled) : ModuleScene(start_enabl
 bool ModuleBeachTrack::Start()
 {
 	
-	App->audio->PlayMusic("Music/Magical_Sound_Shower.ogg", 0.f); //Pendiente selector de musica
+	
 	
 																  
 	//TODOS LOS LOAD DEBERÁN IR A MODULE SCENE, PUES ES ALLI DONDE SE PINTA TODO

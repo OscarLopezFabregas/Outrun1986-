@@ -79,6 +79,7 @@
     <ClInclude Include="ModuleBeachTrack.h" />
     <ClInclude Include="ModuleFadeToBlack.h" />
     <ClInclude Include="ModuleInput.h" />
+    <ClInclude Include="ModuleMusicSelect.h" />
     <ClInclude Include="ModulePlayer.h" />
     <ClInclude Include="ModuleRender.h" />
     <ClInclude Include="ModuleScene.h" />
@@ -96,6 +97,7 @@
     <ClCompile Include="ModuleBeachTrack.cpp" />
     <ClCompile Include="ModuleFadeToBlack.cpp" />
     <ClCompile Include="ModuleInput.cpp" />
+    <ClCompile Include="ModuleMusicSelect.cpp" />
     <ClCompile Include="ModulePlayer.cpp" />
     <ClCompile Include="ModuleRender.cpp" />
     <ClCompile Include="ModuleScene.cpp" />

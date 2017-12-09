@@ -15,7 +15,7 @@ class ModulePlayer;
 class ModuleBeachTrack;
 class ModuleSegaIntro;
 class ModuleStart;
-
+class ModuleMusicSelect;
 class Application
 {
 public:
@@ -38,6 +38,7 @@ public:
 	ModuleBeachTrack* beach_track;
 	ModuleStart* outrun_start;
 	ModuleSegaIntro* sega_intro;
+	ModuleMusicSelect* music_select;
 
 private:
 

@@ -1,8 +1,12 @@
-﻿  ModuleScene.cpp
-c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\line.h(7): warning C4099: 'SDL_Texture': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
-  c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\sdl\include\sdl_render.h(128): note: vea la declaración de 'SDL_Texture'
-c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulescene.cpp(67): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulescene.cpp(97): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulescene.cpp(139): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+﻿  ModuleMusicSelect.cpp
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulemusicselect.cpp(123): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulemusicselect.cpp(124): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulemusicselect.cpp(125): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulemusicselect.cpp(136): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulemusicselect.cpp(137): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulemusicselect.cpp(138): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulemusicselect.cpp(148): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulemusicselect.cpp(149): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulemusicselect.cpp(150): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
   SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Debug\SDL Game - Master 1 Handout.exe
   SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Debug\SDL Game - Master 1 Handout.pdb (Partial PDB)
