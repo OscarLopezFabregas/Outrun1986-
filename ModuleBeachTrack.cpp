@@ -23,6 +23,8 @@ ModuleBeachTrack::ModuleBeachTrack(bool start_enabled) : ModuleScene(start_enabl
 	StartBanner.w = 587;
 	StartBanner.h = 75;
 
+	
+
 
 	pos = 0;
 	playerX = 0;
@@ -30,10 +32,7 @@ ModuleBeachTrack::ModuleBeachTrack(bool start_enabled) : ModuleScene(start_enabl
 
 bool ModuleBeachTrack::Start()
 {
-	
-	
-	
-																  
+																	  
 	//TODOS LOS LOAD DEBERÁN IR A MODULE SCENE, PUES ES ALLI DONDE SE PINTA TODO
 	//EN ESTA CLASSE TAN SOLO SE ALMACENA LAS COORDENADAS DE CADA SPRITE DEL MAPA EN CONCRETO Y SE INTRODUCE EN EL VECTOR LINE, QUE EN DEFINITIVA, ES EL MAPA VECTORIZADO
 
@@ -45,15 +44,12 @@ bool ModuleBeachTrack::Start()
 		Line line;
 		line.z = (float)i * line.segL;
 		if (300 < i &&  i < 600) line.curve = -1;
-		if (i == 350)
-		{
-			line.rectline.x = StartBanner.x;
-			line.rectline.y = StartBanner.y;
-			line.rectline.w = StartBanner.w;
-			line.rectline.h = StartBanner.h;
-		}
 		
-
+		if (i == 13)
+		{
+			line.id = start_banner;
+			line.spriteX = 0;
+		}
 		lines.push_back(line);
 	}
 	N = lines.size();

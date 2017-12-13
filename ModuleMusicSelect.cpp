@@ -133,7 +133,7 @@ update_status ModuleMusicSelect::Update() //FALTA PREVISUALITZACIÓ DE LES CANÇON
 	else if (App->input->GetKey(SDL_SCANCODE_LEFT))
 	{   
 		Keyboardid = SDL_SCANCODE_LEFT;
-		App->renderer->Blit(graphics2, SCREEN_WIDTH / 2.37, SCREEN_HEIGHT / 1.29, &Radiodialright, 1.0f, 2 * Radiodialright.w, 2 * Radiodialright.h);
+		App->renderer->Blit(graphics2, SCREEN_WIDTH / 2.37, SCREEN_HEIGHT / 1.29, &Radiodialleft, 1.0f, 2 * Radiodialleft.w, 2 * Radiodialleft.h);
 		App->renderer->Blit(graphics2, SCREEN_WIDTH/2.7 - Handleft.w/11 , SCREEN_HEIGHT - 2*Handleft.h, &Handleft, 1.0f, 2 * Handleft.w, 2 * Handleft.h);
 		App->renderer->Blit(graphics2, (SCREEN_WIDTH - 2 * Magicalsound.w) / 2, SCREEN_HEIGHT / 2.65, &Magicalsound, 1.0f, 2 * Magicalsound.w, 2 * Magicalsound.h);
 		

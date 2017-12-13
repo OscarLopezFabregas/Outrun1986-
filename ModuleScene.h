@@ -8,6 +8,14 @@
  class Line; 
  struct SDL_Texture;
 
+ //Falta poner una Y para poder elevar el sprite!
+
+ struct Sprite {
+	 int minX;
+	 int maxX;
+	 SDL_Rect rect;
+ };
+
 class ModuleScene : public Module
 {
 public:
@@ -21,7 +29,9 @@ public:
 	
 
 public:
-	SDL_Texture* graphics2;
+	SDL_Texture* graphics;
+	SDL_Texture* background;
+	SDL_Texture* Sprites;
 
 	int lanes = 3;
 	int grass[3];
@@ -38,7 +48,10 @@ public:
 	Color rumble2;
 	Color road1;
 	Color road2;
+	SDL_Rect Background;
 
+	std::vector<Sprite*> sprites;
+	int start_banner;
 	std::vector<Line> lines;
 private:
 	void PrintTrack();
