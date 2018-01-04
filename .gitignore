@@ -13,3 +13,6 @@
 *.ipch
 *.ipch
 *.ipch
+*.ipch
+.vs/SDL Game/v15/.suo
+*.db
