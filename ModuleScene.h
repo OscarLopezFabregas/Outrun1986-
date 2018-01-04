@@ -30,6 +30,7 @@ public:
 	SDL_Texture* graphics;
 	SDL_Texture* background;
 	SDL_Texture* Sprites;
+	SDL_Texture* GUI;
 
 	int lanes = 3;
 	int grass[3];
@@ -40,6 +41,7 @@ public:
 	int N;
 	int playerX;
 	int playerZ = 0;
+
 	Color grass1;
 	Color grass2;
 	Color rumble1;
@@ -50,7 +52,14 @@ public:
 	Color road2;
 	Color trafficline1;
 	Color trafficline2;
+
 	SDL_Rect Background;
+	SDL_Rect guiTime;
+	SDL_Rect guiScore;
+	SDL_Rect guiLap;
+	SDL_Rect guiKmh;
+	SDL_Rect guiStage;
+	SDL_Rect guiMap;
 
 	std::vector<Sprite*> sprites;
 	int start_banner;
@@ -62,7 +71,7 @@ public:
 	std::vector<Line> lines;
 private:
 	void PrintTrack();
-
+	void PrintGUI();
 	
 	
 };

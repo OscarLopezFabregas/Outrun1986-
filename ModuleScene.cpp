@@ -52,6 +52,38 @@ ModuleScene::ModuleScene(bool start_enabled) : Module(start_enabled)
 	sprites.push_back(GrandStand);
 	grandstand = sprites.size() - 1;
 
+	//GUI
+	guiTime.x = 78;
+	guiTime.y = 14;
+	guiTime.w = 142;
+	guiTime.h = 48;
+
+	guiScore.x = 557;
+	guiScore.y = 24;
+	guiScore.w = 171;
+	guiScore.h = 48;
+
+	guiLap.x = 387;
+	guiLap.y = 23;
+	guiLap.w = 126;
+	guiLap.h = 49;
+
+	guiKmh.x = 268;
+	guiKmh.y = 15;
+	guiKmh.w = 83;
+	guiKmh.h = 57;
+
+	guiStage.x = 762;
+	guiStage.y = 30;
+	guiStage.w = 177;
+	guiStage.h = 42;
+
+	guiMap.x = 623;
+	guiMap.y = 128;
+	guiMap.w = 73;
+	guiMap.h = 50;
+
+
 }
 
 ModuleScene::~ModuleScene()
@@ -63,6 +95,7 @@ bool ModuleScene::Start()
 	LOG("Loading scene");
 	Sprites = App->textures->Load("Sprites/BeachTrack.png");
 	background = App->textures->Load("Sprites/BeachTrackBackg2.png");
+	GUI = App->textures->Load("Sprites/GUI.png");
 
 	App->player->Enable();
 	return true;
@@ -143,6 +176,15 @@ void ModuleScene::PrintTrack()
 	}
 }
 // Update: draw background
+void ModuleScene::PrintGUI()
+{
+	App->renderer->Blit(GUI, 30, 30, &guiTime, 0.0f, guiTime.w/2, guiTime.h/2);
+	App->renderer->Blit(GUI, 180, 30, &guiScore, 0.0f,  guiScore.w / 2, guiScore.h / 2);
+	App->renderer->Blit(GUI, 420, 30, &guiLap, 0.0f, guiLap.w / 2, guiLap.h / 2);
+	App->renderer->Blit(GUI, 120, SCREEN_HEIGHT - 55, &guiKmh, 0.0f, guiKmh.w/2 , guiKmh.h/2 );
+	App->renderer->Blit(GUI, 470, SCREEN_HEIGHT - 55, &guiStage, 0.0f, guiStage.w / 2, guiStage.h / 2);
+	App->renderer->Blit(GUI, 600, SCREEN_HEIGHT - 55, &guiMap, 0.0f, guiMap.w / 2, guiMap.h / 2);
+}
 update_status ModuleScene::Update()
 {
 	if (App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_DOWN || App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT)
@@ -169,7 +211,7 @@ update_status ModuleScene::Update()
 	}
 
 	PrintTrack();
-
+	PrintGUI();
 	return UPDATE_CONTINUE;
 
 }

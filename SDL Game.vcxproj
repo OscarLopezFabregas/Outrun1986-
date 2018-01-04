@@ -78,6 +78,7 @@
     <ClInclude Include="ModuleAudio.h" />
     <ClInclude Include="ModuleBeachTrack.h" />
     <ClInclude Include="ModuleFadeToBlack.h" />
+    <ClInclude Include="ModuleFontManager.h" />
     <ClInclude Include="ModuleInput.h" />
     <ClInclude Include="ModuleMusicSelect.h" />
     <ClInclude Include="ModulePlayer.h" />
@@ -91,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="ModuleFontManager.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ModuleAudio.cpp" />

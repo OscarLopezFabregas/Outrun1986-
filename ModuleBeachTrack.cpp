@@ -85,17 +85,12 @@ bool ModuleBeachTrack::Start()
 			}
 		}
 		if (300 < i && i < 500)
-		{
-			
+		{	
 			float transitionValue = (float)(sin( PI*i/300) * 2750);
-			if (-0.1 < transitionValue < 0.1)
-			{
-			 go = true;
-			}
+			if (-0.1 < transitionValue < 0.1) go = true;
 			if (go) line.y = -transitionValue;
 			if (i == 499) lastValue = line.y;
 		}
-		
 		if (i > 499) line.y = lastValue;
 		
 		if (500 < i &&  i < 650) line.curve = -2.5;
