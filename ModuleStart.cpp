@@ -45,7 +45,7 @@ bool ModuleStart::Start()
 	graphics = App->textures->Load("Sprites/StartAnimation.png");
 
 	
-	App->audio->PlayMusic("Music/Magical_Sound_Shower.ogg", 0.0f);
+	//App->audio->PlayMusic("Music/Magical_Sound_Shower.ogg", 0.0f);
 	
 
 	return true;

@@ -128,7 +128,7 @@ bool ModuleRender::BlitPolygon(Color c, int x1, int y1, int w1, int x2, int y2, 
 	bool ret = true;
 	short s[4] = { x1 - (w1),x1 + (w1),x2 + (w2), x2 - (w2) };
 	short t[4] = { y1,y1,y2,y2 };
-	filledPolygonRGBA(renderer,s, t,4, c.r, c.g, c.b, 255);
+	filledPolygonRGBA(renderer,s, t,4, c.r, c.g, c.b, c.a);
 
 	return ret;
 }

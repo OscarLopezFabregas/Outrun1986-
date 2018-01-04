@@ -17,7 +17,8 @@ public:
 	bool Start();
 	~ModuleBeachTrack();
 public:
-	
+	bool go = false;
+	float lastValue;
 	SDL_Rect StartBanner;
 
 };

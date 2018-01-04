@@ -59,7 +59,7 @@ struct Color {
 #define SCREEN_HEIGHT 480
 #define SCREEN_SIZE 1
 #define FULLSCREEN false
-
+#define	PI 3.14159265359
 #define SEGMENT_LENGTH 200
 #define CAMERA_DEPTH 0.84
 #define ROAD_WIDTH 2000;

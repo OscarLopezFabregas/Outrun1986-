@@ -23,13 +23,35 @@ ModuleScene::ModuleScene(bool start_enabled) : Module(start_enabled)
 	
 
 	Sprite* Start_Banner = new Sprite();
-	Start_Banner->maxX = 0;
-	Start_Banner->minX = 0;
-	Start_Banner->rect = { 51, 45, 587, 200};
+	Start_Banner->rect = { 338, 38, 587, 250};
 	sprites.push_back(Start_Banner);
-	start_banner = sprites.size() - 1;
+	start_banner = sprites.size() - 1;//WHY
 
-	
+	Sprite* Palm_Left = new Sprite();
+	Palm_Left->rect = { 40,38, 131, 287 };
+	sprites.push_back(Palm_Left);
+	palm_left = sprites.size() - 1;//WHY
+
+	Sprite* Palm_Right = new Sprite();
+	Palm_Right->rect = { 176,57,131,287 };
+	sprites.push_back(Palm_Right);
+	palm_right = sprites.size() - 1;
+
+	Sprite* Traffic_Light = new Sprite();
+	Traffic_Light->rect = {64,338,136,218};
+	sprites.push_back(Traffic_Light);
+	traffic_light = sprites.size() - 1;
+
+	Sprite* Column = new Sprite();
+	Column->rect = { 226,356,50,200 };
+	sprites.push_back(Column);
+	column = sprites.size() - 1;
+
+	Sprite* GrandStand = new Sprite();
+	GrandStand->rect = { 323,373,400,137 };
+	sprites.push_back(GrandStand);
+	grandstand = sprites.size() - 1;
+
 }
 
 ModuleScene::~ModuleScene()
@@ -96,28 +118,28 @@ void ModuleScene::PrintTrack()
 		//Alternate in colors
 		Color grass = (n / 3) % 2 ? grass1 : grass2;
 		Color rumble = (n / 3) % 2 ? rumble1 : rumble2;
+		Color sideline = (n / 3) % 2 ? sideline1 : sideline2;
 		Color road = (n / 3) % 2 ? road1 : road2;
-
+		
 		//	Color Line;
 			if (n == 0)n++;
 			Line p = lines[(n - 1) % N]; //previos line
 
 			App->renderer->BlitPolygon(grass, 0, (short)p.Y, (short)p.width, 0, (short)l.Y, (short)l.width);
 			App->renderer->BlitPolygon(rumble, (short)p.X,(short)p.Y, (short)(p.W*1.2),(short)l.X,(short)l.Y,(short)(l.W*1.2));
+			App->renderer->BlitPolygon(sideline, (short)p.X, (short)p.Y, (short)(p.W*1.07), (short)l.X, (short)l.Y, (short)(l.W*1.07));
 			App->renderer->BlitPolygon(road, (short)p.X, (short)p.Y, (short)p.W, (short)l.X, (short)l.Y, (short)l.W);
-		   // App->renderer->BlitPolygon(line,(short)p.X, (short)p.Y, (short)(p.W*0.05), (short)l.X, (short)l.Y, (short)(l.W*0.05));
-			
+			App->renderer->BlitPolygon(sideline, (short)p.X, (short)p.Y, (short)(p.W*0.40), (short)l.X, (short)l.Y, (short)(l.W*0.40));
+			App->renderer->BlitPolygon(road, (short)p.X, (short)p.Y, (short)p.W*0.33, (short)l.X, (short)l.Y, (short)l.W*0.33);
+		   
 		  
-
-			//DRAW OBJECTS **EN CONSTRUCCION**
-			//App->renderer->Blit(graphics2, l.X, l.Y, &l.rectline, 1.0f, -1, -1);
 			
 	}
 	//draw objects
 	for (int n = startPos + 300; n > startPos; n--)
 	{
 		if (lines[n%N].id != -1)
-			lines[n%N].DrawObject(sprites[lines[n%N].id]->rect, Sprites, 0);
+			lines[n%N].DrawObject(sprites[lines[n%N].id]->rect, Sprites);
 	}
 }
 // Update: draw background

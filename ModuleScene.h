@@ -11,8 +11,6 @@
  //Falta poner una Y para poder elevar el sprite!
 
  struct Sprite {
-	 int minX;
-	 int maxX;
 	 SDL_Rect rect;
  };
 
@@ -46,12 +44,21 @@ public:
 	Color grass2;
 	Color rumble1;
 	Color rumble2;
+	Color sideline1;
+	Color sideline2;
 	Color road1;
 	Color road2;
+	Color trafficline1;
+	Color trafficline2;
 	SDL_Rect Background;
 
 	std::vector<Sprite*> sprites;
 	int start_banner;
+	int palm_left;
+	int palm_right;
+	int traffic_light;
+	int column;
+	int grandstand;
 	std::vector<Line> lines;
 private:
 	void PrintTrack();

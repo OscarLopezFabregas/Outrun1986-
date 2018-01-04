@@ -12,16 +12,14 @@ ModuleBeachTrack::ModuleBeachTrack(bool start_enabled) : ModuleScene(start_enabl
 	//Colors of Beach Track
 	grass1 = Color(242, 240, 193, 255);
 	grass2 = Color(222, 220, 180, 255);
-	rumble1 = Color(128, 128, 128, 255);
-	rumble2 = Color(225, 225, 225, 255);
-	road1 = Color(192, 192, 192, 255);
-	road2 = Color(150, 150, 150, 255);
-	
-	//Defining all the sprites
-	StartBanner.x = 51;
-	StartBanner.y = 45;
-	StartBanner.w = 587;
-	StartBanner.h = 75;
+	rumble1 = Color(170, 170, 170, 255);
+	rumble2 = Color(255, 255, 255, 255);
+	sideline1 = Color(255, 255, 255, 255);
+	sideline2 = Color(192,192,192,255);
+	road1 = Color(170, 170, 170, 255);
+	road2 = Color(192, 192, 192, 255);
+	trafficline1 = Color(255, 255, 255, 255);
+	trafficline2 = Color(0, 0, 0, 0);
 
 	
 
@@ -43,13 +41,75 @@ bool ModuleBeachTrack::Start()
 	{
 		Line line;
 		line.z = (float)i * line.segL;
-		if (300 < i &&  i < 600) line.curve = -1;
+				
+		if (0<i && i<550)
+		{
+			if (i % 10 == 0) {
+				line.id = palm_left;
+				line.spriteX = -1.2;
+			}
+			if (i % 9 == 0) {
+				line.id = palm_right;
+				line.spriteX = 1.2;
+			}
 		
-		if (i == 13)
+		}
+		if (i == 9)
+		{
+			line.id = palm_right;
+			line.spriteX = 1;
+		}
+		if (i == 11)
+		{
+			line.id = traffic_light;
+			line.spriteX = -0.9;
+		}
+		if (i == 12)
 		{
 			line.id = start_banner;
 			line.spriteX = 0;
 		}
+		if (i == 13)
+		{
+			line.id = column;
+			line.spriteX = 0.9;
+		}
+
+
+		if (i > 50 && i < 250)
+		{
+			if (i % 7 == 0)
+			{
+				line.id = grandstand;
+				line.spriteX = -2;
+			}
+		}
+		if (300 < i && i < 500)
+		{
+			
+			float transitionValue = (float)(sin( PI*i/300) * 2750);
+			if (-0.1 < transitionValue < 0.1)
+			{
+			 go = true;
+			}
+			if (go) line.y = -transitionValue;
+			if (i == 499) lastValue = line.y;
+		}
+		
+		if (i > 499) line.y = lastValue;
+		
+		if (500 < i &&  i < 650) line.curve = -2.5;
+		if (650 < i &&  i < 900) line.curve = 2.5;
+
+		if (900 < i && i < 1500)
+		{
+			float transitionValue = (float)(sin(PI*i / 300) * 2750);
+			if (-0.1 < transitionValue < 0.1) go = true;
+			if (go)	line.y = transitionValue;
+			if (i == 1499) lastValue = line.y;
+		}
+		if (i > 1499) line.y = lastValue;
+
 		lines.push_back(line);
 	}
 	N = lines.size();
