@@ -16,6 +16,8 @@ class ModuleBeachTrack;
 class ModuleSegaIntro;
 class ModuleStart;
 class ModuleMusicSelect;
+class ModuleFontManager;
+
 class Application
 {
 public:
@@ -34,6 +36,7 @@ public:
 	ModuleInput* input;
 	ModuleAudio* audio;
 	ModuleFadeToBlack* fade;
+	ModuleFontManager* fontManager;
 	ModulePlayer* player;
 	ModuleBeachTrack* beach_track;
 	ModuleStart* outrun_start;

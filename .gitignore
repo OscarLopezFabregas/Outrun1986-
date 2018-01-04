@@ -16,3 +16,6 @@
 *.ipch
 .vs/SDL Game/v15/.suo
 *.db
+.vs/SDL Game/v15/.suo
+*.db
+*.ipch

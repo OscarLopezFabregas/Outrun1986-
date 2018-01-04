@@ -181,9 +181,9 @@ void ModuleScene::PrintGUI()
 	App->renderer->Blit(GUI, 30, 30, &guiTime, 0.0f, guiTime.w/2, guiTime.h/2);
 	App->renderer->Blit(GUI, 180, 30, &guiScore, 0.0f,  guiScore.w / 2, guiScore.h / 2);
 	App->renderer->Blit(GUI, 420, 30, &guiLap, 0.0f, guiLap.w / 2, guiLap.h / 2);
-	App->renderer->Blit(GUI, 120, SCREEN_HEIGHT - 55, &guiKmh, 0.0f, guiKmh.w/2 , guiKmh.h/2 );
-	App->renderer->Blit(GUI, 470, SCREEN_HEIGHT - 55, &guiStage, 0.0f, guiStage.w / 2, guiStage.h / 2);
-	App->renderer->Blit(GUI, 600, SCREEN_HEIGHT - 55, &guiMap, 0.0f, guiMap.w / 2, guiMap.h / 2);
+	App->renderer->Blit(GUI, 120, SCREEN_HEIGHT - 50, &guiKmh, 0.0f, guiKmh.w/2 , guiKmh.h/2 );
+	App->renderer->Blit(GUI, 470, SCREEN_HEIGHT - 50, &guiStage, 0.0f, guiStage.w / 2, guiStage.h / 2);
+	App->renderer->Blit(GUI, 600, SCREEN_HEIGHT - 50, &guiMap, 0.0f, guiMap.w / 2, guiMap.h / 2);
 }
 update_status ModuleScene::Update()
 {

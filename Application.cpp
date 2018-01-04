@@ -5,6 +5,7 @@
 #include "ModuleInput.h"
 #include "ModuleAudio.h"
 #include "ModuleFadeToBlack.h"
+#include "ModuleFontManager.h"
 #include "ModulePlayer.h"
 #include "ModuleSegaIntro.h"
 #include "ModuleBeachTrack.h"
@@ -22,7 +23,7 @@ Application::Application()
 	modules.push_back(renderer = new ModuleRender());
 	modules.push_back(textures = new ModuleTextures());
 	modules.push_back(audio = new ModuleAudio());
-
+	modules.push_back(fontManager = new ModuleFontManager());
 	// Game Modules
 	modules.push_back(sega_intro = new ModuleSegaIntro(false));
 	modules.push_back(outrun_start = new ModuleStart(false));
