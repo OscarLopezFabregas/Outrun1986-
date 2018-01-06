@@ -21,7 +21,24 @@ public:
 public:
 
 	SDL_Texture* graphics = nullptr;
-	Animation idleferrari;
+
+	Animation* carState = nullptr;
+
+	Animation idle;
+	Animation idleUp;
+	Animation idleLeft;
+	Animation idleRight;
+	Animation idleUpLeft;
+	Animation idleUpRight;
+	Animation forward;
+	Animation forwardDown;
+	Animation forwardUp;
+	Animation left;
+	Animation right;
+	Animation rightUp;
+	Animation leftUp;
+
+
 	Animation idlepilot;
 	Animation idlegirl;
 	float playerX = 0;
@@ -30,7 +47,8 @@ public:
 	//Animation backward;
 	//Animation forward;
 	iPoint position;
-
+	
 };
 
 #endif // __MODULEPLAYER_H__
+

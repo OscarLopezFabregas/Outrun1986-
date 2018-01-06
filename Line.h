@@ -39,7 +39,9 @@ public:
 	//from world to screen coordinates;
 	void project(int camX, int camY, int camZ)
 	{
+		if (z < camZ) return;
 		scale = camD / (z - camZ);
+
 		X = (float)((1 + scale * (x - camX)) *  width / 2); //Casting required?
 		Y = (float)((1 - scale * (y - camY)) * height / 2);
 		W = (float)(scale * roadW * width / 2);
@@ -58,7 +60,7 @@ public:
 			destX = X + scale * spriteXToDraw * width / 2;
 			destY = Y + 4;
 			destX += destW * spriteXToDraw; //offsetX
-			destY += destH * (-1);    //offsetY ///////JODEEEEER
+			destY += destH * (-1);    //offsetY
 	
 		float clipH = destY + destH - clip;
 		if (clipH<0) clipH = 0;

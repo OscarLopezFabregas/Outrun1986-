@@ -41,7 +41,7 @@ bool ModuleBeachTrack::Start()
 	{
 		Line line;
 		line.z = (float)i * line.segL;
-				
+		
 		if (0<i && i<550)
 		{
 			if (i % 10 == 0) {
@@ -92,10 +92,19 @@ bool ModuleBeachTrack::Start()
 			if (i == 499) lastValue = line.y;
 		}
 		if (i > 499) line.y = lastValue;
-		
-		if (500 < i &&  i < 650) line.curve = -2.5;
-		if (650 < i &&  i < 900) line.curve = 2.5;
 
+		if (i == 575) {
+			line.id = checkpoint;
+			line.spriteX = 1;
+		}
+		if (500 < i &&  i < 650)
+		{
+			line.curve = -2.5;
+		}
+		if (650 < i &&  i < 900)
+		{
+			line.curve = 2.5;
+		}
 		if (900 < i && i < 1500)
 		{
 			float transitionValue = (float)(sin(PI*i / 300) * 2750);
@@ -104,6 +113,7 @@ bool ModuleBeachTrack::Start()
 			if (i == 1499) lastValue = line.y;
 		}
 		if (i > 1499) line.y = lastValue;
+	
 
 		lines.push_back(line);
 	}

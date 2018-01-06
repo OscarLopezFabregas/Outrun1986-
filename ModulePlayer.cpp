@@ -4,20 +4,73 @@
 #include "ModuleInput.h"
 #include "ModuleRender.h"
 #include "ModuleTextures.h"
+#include "ModuleBeachTrack.h"
 #include "SDL/include/SDL.h"
 #include "ModuleAudio.h"
-
-
 
 
 
 // Reference at https://www.youtube.com/watch?v=OEhmUuehGOA
 ModulePlayer::ModulePlayer(bool start_enabled) : Module(start_enabled)
 {
-	position.x = ((SCREEN_WIDTH*SCREEN_SIZE)-35)/2;
-	position.y = (SCREEN_HEIGHT*SCREEN_SIZE) - 40;
+	//FORWARD 
 
-	idleferrari.frames.push_back({ 207,198,77,40 });
+	// idle animation (stopped movement with no hill)
+	idle.frames.push_back({ 0, 44, 90, 41 });
+
+	//idle (stopped uphill)
+	idleUp.frames.push_back({ 0, 0, 90, 44 });
+
+	// forward movement with no hill
+	forward.frames.push_back({ 0, 44, 90, 41 });
+	forward.frames.push_back({ 92, 44, 90, 41 });
+	forward.speed = 0.2f;
+
+	// move upwards (forward but uphill)
+	forwardUp.frames.push_back({ 0, 0, 90, 44 });
+	forwardUp.frames.push_back({ 92, 0, 90, 44 });
+	forwardUp.speed = 0.2f;
+
+	//move downwards (forward but downhill)
+	forwardDown.frames.push_back({ 0, 85, 90, 36 });
+	//forwardDown.frames.push_back({ 92, 0, 90, 44 });
+	forwardDown.speed = 0.2f;
+
+	//LEFT
+
+	//idle left (no movement but turned left)
+	idleLeft.frames.push_back({ 656, 165, 84, 41 });
+
+	//idle left (going uphill)
+	idleUpLeft.frames.push_back({ 653, 121, 86, 44 });
+
+	//turn left (no hill)
+	left.frames.push_back({ 656, 165, 84, 41 });
+	left.frames.push_back({ 564, 165, 84, 41 });
+	left.speed = 0.2f;
+
+	//turn left (uphill)
+	leftUp.frames.push_back({ 653, 121, 86, 44 });
+	leftUp.frames.push_back({ 561, 121, 86, 44 });
+	leftUp.speed = 0.2f;
+
+	//RIGHT
+
+	//idle right (no movement but turned right)
+	idleRight.frames.push_back({ 0, 165, 84, 41 });
+
+	//idle right (going uphill)
+	idleUpRight.frames.push_back({ 0, 121, 84, 44 });
+
+	//turn right (no hill)
+	right.frames.push_back({ 0, 165, 84, 41 });
+	right.frames.push_back({ 92, 165, 84, 41 });
+	right.speed = 0.2f;
+
+	//turn right (uphill)
+	rightUp.frames.push_back({ 0, 121, 84, 44 });
+	rightUp.frames.push_back({ 92, 121, 84, 44 });
+	rightUp.speed = 0.2f;
 
 	
 }
@@ -32,7 +85,7 @@ bool ModulePlayer::Start()
 {
 	LOG("Loading player");
 
-	graphics = App->textures->Load("Sprites/player.png"); // arcade version
+	graphics = App->textures->Load("Sprites/ferrari.png"); // arcade version
 	
 	
 	return true;
@@ -55,21 +108,9 @@ update_status ModulePlayer::Update()
 	// make sure to detect player movement and change its
 	// position while cycling the animation(check Animation.h)
 
-	App->renderer->Blit(graphics, (SCREEN_WIDTH - 2 * idleferrari.GetCurrentFrame().w) /2,(SCREEN_HEIGHT- 2 * idleferrari.GetCurrentFrame().h)-5, &(idleferrari.GetCurrentFrame()), 1.0f,
-		2*idleferrari.GetCurrentFrame().w, 2*idleferrari.GetCurrentFrame().h);
 	
-	if (App->input->GetKey(SDLK_UP)) {
-		playerX += 200;
-	}
-	if (App->input->GetKey(SDLK_RIGHT))
-	{
-		playerZ += 200;
-	}
-	if (App->input->GetKey(SDLK_LEFT))
-	{
-		playerZ -= 200;
-	}
 
+	
 
 	return UPDATE_CONTINUE;
 }

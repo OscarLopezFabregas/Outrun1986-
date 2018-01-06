@@ -46,6 +46,7 @@ public:
 private:
 
 	std::list<Module*> modules;
+	
 
 };
 

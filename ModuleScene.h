@@ -14,6 +14,17 @@
 	 SDL_Rect rect;
  };
 
+ struct Enemy {
+	 float posZ;
+	 float posX;
+	 float animationTime = 0;
+	 int posStopSprint;
+	 int color;
+	 int speed;
+	 int position = 3;
+	 Animation* current_animation = nullptr;
+ };
+
 class ModuleScene : public Module
 {
 public:
@@ -24,6 +35,8 @@ public:
 	update_status Update();
 	/*update_status PostUpdate();*/
 	bool CleanUp();
+
+	void TimeManager();
 	
 
 public:
@@ -40,7 +53,9 @@ public:
 	int pos;
 	int N;
 	int playerX;
-	int playerZ = 0;
+	int playerZ;
+	bool prueba = false;
+
 
 	Color grass1;
 	Color grass2;
@@ -68,11 +83,23 @@ public:
 	int traffic_light;
 	int column;
 	int grandstand;
+	int checkpoint;
+
+	int secondsPassed;
+	int secondsToQuit;
+	int secondsLap;
+	int secondsAux;
+	long initTimer;
+	int miliSecondsLap;
+	int minuteLap;
+	int score;
+	int speed;
+
 	std::vector<Line> lines;
 private:
 	void PrintTrack();
 	void PrintGUI();
-	
+	void AnimationPlayer();
 	
 };
 

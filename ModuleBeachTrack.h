@@ -7,8 +7,6 @@
 
 
 
-
-
 class ModuleBeachTrack : public ModuleScene
 {
 
@@ -20,6 +18,7 @@ public:
 	bool go = false;
 	float lastValue;
 	SDL_Rect StartBanner;
+	
 
 };
 
