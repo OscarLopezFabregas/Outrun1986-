@@ -25,6 +25,8 @@ Some logic and functions would obviously need to be added, but even though I kne
  
   [![SEGA](https://gyazo.com/e34258496716e1c52d5838a782c28d63)](https://gyazo.com/e34258496716e1c52d5838a782c28d63 "Sega Animation")
   
+  [21:33, 7/1/2018] Marc: [![Video Showcase](http://img.youtube.com/vi/6bqPE30jTU0/0.jpg)](http://www.youtube.com/watch?v=6bqPE30jTU0 "Skeletal Animation Showcase - AK Engine")
+  
 # Commands
  On the game you manage a ferrari on the track where you have to face the time. You will have a number of seconds to get the next check point, once you get it, this time increase giving you the chance of getting the next one.
   
@@ -33,7 +35,7 @@ Some logic and functions would obviously need to be added, but even though I kne
  * **TURN RIGHT:** (Right key)
  * **START BUTTON:** (Space Bar)
  
- # How to finish the game?
+ # CHow to finish the game:
  
  The game will finish when you run out of time.
 
