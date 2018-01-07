@@ -19,9 +19,6 @@
  -- List
  License: GNU GENERAL PUBLIC LICENSE
   
- 1. Numbered
- 2. List
-  
  Currently the game only features the race at the beach, with a few of the assets and decoration. The game
  is ready to implement the other maps just creating the file with the road configuration.
   
