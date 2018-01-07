@@ -12,7 +12,7 @@ Some logic and functions would obviously need to be added, but even though I kne
   
   Latest release (1.0): [https://github.com/OscarLopezFabregas/Outrun1986-/releases](https://github.com/OscarLopezFabregas/Outrun1986-/releases)
   
- *Author*:[https://www.linkedin.com/in/oscarlopezfabregas/](Oscar Lopez Fabregas)
+ *Author*:[Oscar Lopez Fabregas](https://www.linkedin.com/in/oscarlopezfabregas/)
  
  Contact: oscar.lopez.fabregas@gmail.com
   
