@@ -23,9 +23,9 @@ Some logic and functions would obviously need to be added, but even though I kne
  
  # gifs 
  
-  [![SEGA](https://i.gyazo.com/e34258496716e1c52d5838a782c28d63.mp4)](https://gyazo.com/e34258496716e1c52d5838a782c28d63 "Sega Animation")
+  [![SEGA](https://i.gyazo.com/e34258496716e1c52d5838a782c28d63.gif)](https://gyazo.com/e34258496716e1c52d5838a782c28d63 "Sega Animation")
   
-   [![Video Showcase](https://i.gyazo.com/9fe2d5df4b65161caf7bf007866e5fce.mp4)](https://gyazo.com/9fe2d5df4b65161caf7bf007866e5fce "Colisions")
+   [![Video Showcase](https://i.gyazo.com/9fe2d5df4b65161caf7bf007866e5fce.gif)](https://gyazo.com/9fe2d5df4b65161caf7bf007866e5fce "Colisions")
   
 # Commands
  On the game you manage a ferrari on the track where you have to face the time. You will have a number of seconds to get the next check point, once you get it, this time increase giving you the chance of getting the next one.
