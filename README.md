@@ -7,7 +7,7 @@ Some logic and functions would obviously need to be added, but even though I kne
   
  Full project at github: [https://github.com/OscarLopezFabregas/Outrun1986-](https://github.com/OscarLopezFabregas/Outrun1986-) 
   
- ### Markdown
+ # Markdown
  Project webpage: https://oscarlopezfabregas.github.io/Outrun1986-/ 
   
   Latest release (1.0): https://github.com/OscarLopezFabregas/Outrun1986-/releases 
@@ -21,7 +21,7 @@ Some logic and functions would obviously need to be added, but even though I kne
  Currently the game only features the race at the beach, with a few of the assets and decoration. The game
  is ready to implement the other maps just creating the file with the road configuration.
   
- ## Commands
+ # Commands
  On the game you manage a ferrari on the track where you have to face the time. You will have a number of seconds to get the next check point, once you get it, this time increase giving you the chance of getting the next one.
   
  * **SPEED UP:** (Up key)
@@ -32,6 +32,6 @@ Some logic and functions would obviously need to be added, but even though I kne
  
  The game will finish when you run out of time.
 
- ## Acknowledgements
+ # Acknowledgements
  * http://www.extentofthejam.com/pseudo/
  * https://www.youtube.com/watch?v=N60lBZDEwJ8
