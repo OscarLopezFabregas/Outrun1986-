@@ -25,6 +25,12 @@ Some logic and functions would obviously need to be added, but even though I kne
  
   [![SEGA](https://i.gyazo.com/e34258496716e1c52d5838a782c28d63.gif)](https://gyazo.com/e34258496716e1c52d5838a782c28d63 "Sega Animation")
   
+   [![SEGA](https://i.gyazo.com/e22a60ff8b7348837376fa0247381799.gif)](https://gyazo.com/e22a60ff8b7348837376fa0247381799 "Start Animation")
+  
+  [![SEGA](https://i.gyazo.com/ff80326c64299397deb0358bd513d592.gif)](https://gyazo.com/ff80326c64299397deb0358bd513d592 "Music Select Animation")
+  
+   [![SEGA](https://i.gyazo.com/6fc8228d41db504277acdd926f3d7885.gif)](https://gyazo.com/6fc8228d41db504277acdd926f3d7885  "Start Race")
+  
    [![Video Showcase](https://i.gyazo.com/9fe2d5df4b65161caf7bf007866e5fce.gif)](https://gyazo.com/9fe2d5df4b65161caf7bf007866e5fce "Colisions")
   
 # Commands
