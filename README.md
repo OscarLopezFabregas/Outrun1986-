@@ -41,7 +41,7 @@ Some logic and functions would obviously need to be added, but even though I kne
  * **TURN RIGHT:** (Right key)
  * **START BUTTON:** (Space Bar)
  
- # CHow to finish the game:
+ # How to finish the game:
  
  The game will finish when you run out of time.
 
