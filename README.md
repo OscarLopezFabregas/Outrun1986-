@@ -9,7 +9,7 @@
  ### Markdown
  Project webpage: [https://github.com/Outrun1986-/](https://github.com/Outrun1986-) 
   
- # Latest release (1.0): https://github.com/OscarLopezFabregas/Outrun1986-/releases 
+  Latest release (1.0): https://github.com/OscarLopezFabregas/Outrun1986-/releases 
   
  *Author*: Oscar Lopez Fabregas
  
