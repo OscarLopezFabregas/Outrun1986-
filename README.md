@@ -10,7 +10,7 @@ Some logic and functions would obviously need to be added, but even though I kne
 # Markdown
  Project webpage: [https://oscarlopezfabregas.github.io/Outrun1986-/](https://oscarlopezfabregas.github.io/Outrun1986-/)
   
-  Latest release (1.0): [https://github.com/OscarLopezFabregas/Outrun1986-/releases] 
+  Latest release (1.0): [https://github.com/OscarLopezFabregas/Outrun1986-/releases] (https://github.com/OscarLopezFabregas/Outrun1986-/releases)
   
  *Author*: Oscar Lopez Fabregas
  
