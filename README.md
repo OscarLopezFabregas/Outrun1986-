@@ -3,7 +3,8 @@
  This is my tribute to Outrun, an Arcade game released by Sega in 1986. Made entirely in C++ using SDL libraries and Visual Studio 2017.
   
 Some logic and functions would obviously need to be added, but even though I knew that the full replica would be impossible to achieve, the code has been structured to favor expansion and be able to add new stages and mechanics that existed in the original game without too many changes. 
- ## PROJECT INFORMATION
+
+ # PROJECT INFORMATION
   
  Full project at github: [https://github.com/OscarLopezFabregas/Outrun1986-](https://github.com/OscarLopezFabregas/Outrun1986-) 
   
