@@ -23,7 +23,7 @@ Some logic and functions would obviously need to be added, but even though I kne
  
  # gifs 
  
-  [![SEGA](https://gyazo.com/e34258496716e1c52d5838a782c28d63)](https://gyazo.com/e34258496716e1c52d5838a782c28d63 "Sega Animation")
+  [![SEGA](https://i.gyazo.com/e34258496716e1c52d5838a782c28d63.mp4)](https://gyazo.com/e34258496716e1c52d5838a782c28d63 "Sega Animation")
   
    [![Video Showcase](https://i.gyazo.com/9fe2d5df4b65161caf7bf007866e5fce.mp4)](https://gyazo.com/9fe2d5df4b65161caf7bf007866e5fce "Colisions")
   
