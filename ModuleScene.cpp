@@ -251,19 +251,16 @@ void ModuleScene::PrintTrack()
 		}
 		if (lines[n%N].curve > 0)
 		{
-			backgroundX -= speed / (float)parallaxFactor;
+			backgroundX -= speed / parallaxFactor;
 			
 		}
 		if (lines[n%N].curve < 0)
 		{
-			backgroundX += speed / (float)parallaxFactor;
+			backgroundX += speed / parallaxFactor;
 
 		}
 	}
-	/*for (int n = startPos; n < startPos + 2; n++)
-	{
-		if (lines[n%N].id != -1 && )
-	}*/
+	
 }
 // Update: draw background
 void ModuleScene::PrintGUI()
@@ -383,6 +380,10 @@ update_status ModuleScene::Update()
 		playerX += speed;
 	}
 
+	if (speed > MAX_SPEED - 20)
+	{
+		App->audio->PlayFx(App->player->speed, 1);
+	}
 
 	int currentCurve = lines[startPos%N].curve;
 

@@ -18,9 +18,11 @@ public:
 	update_status Update();
 	bool CleanUp();
 
+	void DetectCollision(const SDL_Rect r);
 public:
 
 	SDL_Texture* graphics = nullptr;
+	SDL_Rect collider;
 
 	Animation* carState = nullptr;
 
@@ -43,7 +45,9 @@ public:
 	Animation idlegirl;
 	float playerX = 0;
 	float playerZ = 0;
-	double speed; //unused
+	int crash = 0;
+	int speed = 0;
+
 	//Animation backward;
 	//Animation forward;
 	iPoint position;

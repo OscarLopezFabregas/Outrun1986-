@@ -2,6 +2,9 @@
 #define _LINE_
 
 #include "Globals.h"
+#include "ModulePlayer.h"
+#include "ModuleScene.h"
+#include "ModuleBeachTrack.h"
 #include <vector>
 
 class SDL_Texture;
@@ -25,7 +28,8 @@ public:
 	float camD = (float)CAMERA_DEPTH;
 	
 	SDL_Rect rectline; 
-	
+	SDL_Rect hitbox;
+
 	Line() 
 	{
 		x = y = z = X = Y = W = 0;
@@ -52,28 +56,56 @@ public:
 		float spriteXToDraw = spriteX;
 		int w = sprite.w;
 		int h = sprite.h;
-	
-		
+
+
 		float destW = w * W / 266;
 		float destH = h * W / 266;
-	
-			destX = X + scale * spriteXToDraw * width / 2;
-			destY = Y + 4;
-			destX += destW * spriteXToDraw; //offsetX
-			destY += destH * (-1);    //offsetY
-	
+
+		destX = X + scale * spriteXToDraw * width / 2;
+		destY = Y + 4;
+		destX += destW * spriteXToDraw; //offsetX
+		destY += destH * (-1);    //offsetY
+
 		float clipH = destY + destH - clip;
-		if (clipH<0) clipH = 0;
+		if (clipH < 0) clipH = 0;
 
 
 		destX = X + (W * spriteXToDraw);
 		if (clipH >= destH) return;
+
 
 		sprite.h = (int)(h - h*clipH / destH);
 		int spriteScaleH = (int)(sprite.h*(destH / h));
 		int spriteScaleW = (int)(sprite.w*(destW / w));
 		App->renderer->Blit(texture, (int)destX - spriteScaleW / 2,
 			(int)destY, &sprite, 0.f, spriteScaleW, spriteScaleH);
+
+
+
+		if (id == App->beach_track->palm_left || id == App->beach_track->grandstand || id == App->beach_track->bushleft) {
+			hitbox.x = (int)destX - spriteScaleW;
+			hitbox.y = (int)destY;
+			hitbox.w = spriteScaleW;
+			hitbox.h = spriteScaleH;
+			App->player->DetectCollision(hitbox);
+		}
+
+		if (id == App->beach_track->palm_right || id == App->beach_track->bushright) {
+			hitbox.x = (int)destX + 50;
+			hitbox.y = (int)destY;
+			hitbox.w = spriteScaleW;
+			hitbox.h = spriteScaleH;
+			App->player->DetectCollision(hitbox);
+		}
+
+		if (id == App->beach_track->boathouse)
+		{
+			hitbox.x = (int)destX - spriteScaleW/2;
+			hitbox.y = (int)destY;
+			hitbox.w = spriteScaleW;
+			hitbox.h = spriteScaleH;
+			App->player->DetectCollision(hitbox);
+		}
 	}
 };
 

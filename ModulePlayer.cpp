@@ -77,7 +77,7 @@ ModulePlayer::ModulePlayer(bool start_enabled) : Module(start_enabled)
 
 ModulePlayer::~ModulePlayer()
 {
-	// Homework : check for memory leaks
+	
 }
 
 // Load assets
@@ -85,9 +85,10 @@ bool ModulePlayer::Start()
 {
 	LOG("Loading player");
 
-	graphics = App->textures->Load("Sprites/ferrari.png"); // arcade version
-	
-	
+	graphics = App->textures->Load("Sprites/ferrari.png"); 
+	crash = App->audio->LoadFx("Music/SmallCrash.ogg");
+	speed = App->audio->LoadFx("Music/Speed.ogg");
+
 	return true;
 }
 
@@ -101,16 +102,24 @@ bool ModulePlayer::CleanUp()
 	return true;
 }
 
+void ModulePlayer::DetectCollision(const SDL_Rect r)
+{
+	if (!(collider.x > r.x + r.w || collider.x + collider.w < r.x || collider.y > r.y + r.h || collider.y + collider.h < r.y))
+	{
+		App->audio->PlayFx(crash, 0);
+		App->beach_track->playerZ = 0;
+		App->beach_track->speed = 0;
+	}
+	
+}
 // Update
 update_status ModulePlayer::Update()
 {
-	// TODO 9: Draw the player with its animation
-	// make sure to detect player movement and change its
-	// position while cycling the animation(check Animation.h)
-
 	
 
 	
+
+	collider = { SCREEN_WIDTH / 2 - carState->GetCurrentFrame().w + 40, SCREEN_HEIGHT - 50, (carState->GetCurrentFrame().w - 40) * 2, 50 };
 
 	return UPDATE_CONTINUE;
 }
