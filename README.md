@@ -1,5 +1,4 @@
 # Outrun1986-
-# Super Hang On (Drive)
  This is my tribute to Outrun, an Arcade game released by Sega in 1986. Made entirely in C++ using SDL libraries and Visual Studio 2017.
   
 Some logic and functions would obviously need to be added, but even though I knew that the full replica would be impossible to achieve, the code has been structured to favor expansion and be able to add new stages and mechanics that existed in the original game without too many changes. 
@@ -21,6 +20,10 @@ Some logic and functions would obviously need to be added, but even though I kne
   
  Currently the game only features the race at the beach, with a few of the assets and decoration. The game
  is ready to implement the other maps just creating the file with the road configuration.
+ 
+ # gifs 
+ 
+  [![SEGA](https://gyazo.com/e34258496716e1c52d5838a782c28d63)](https://gyazo.com/e34258496716e1c52d5838a782c28d63 "Sega Animation")
   
 # Commands
  On the game you manage a ferrari on the track where you have to face the time. You will have a number of seconds to get the next check point, once you get it, this time increase giving you the chance of getting the next one.
