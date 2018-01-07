@@ -32,5 +32,5 @@
  The game will finish when you run out of time.
 
  ## Acknowledgements
- * [http://www.extentofthejam.com/pseudo/]
- * [https://www.youtube.com/watch?v=N60lBZDEwJ8]
+ * http://www.extentofthejam.com/pseudo/
+ * https://www.youtube.com/watch?v=N60lBZDEwJ8
