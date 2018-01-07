@@ -22,14 +22,10 @@ ModuleScene::ModuleScene(bool start_enabled) : Module(start_enabled)
 	Background.x = 0;
 	Background.y = 0;
 	Background.w = 1891;
-	Background.h = 245;
+	Background.h = 255;
 
 
-	clock_t initT = clock();
-	initTimer = initT;
-	minuteLap = 0;
-	secondsLap = 0;
-	miliSecondsLap = 0;
+
 	
 
 	Sprite* Start_Banner = new Sprite();
@@ -66,6 +62,31 @@ ModuleScene::ModuleScene(bool start_enabled) : Module(start_enabled)
 	CheckPoint->rect = { 45,575,288,227 };
 	sprites.push_back(CheckPoint);
 	checkpoint = sprites.size() - 1;
+
+	Sprite* Water = new Sprite();
+	Water->rect = { 16,904,521,67};
+	sprites.push_back(Water);
+	water = sprites.size() - 1;
+
+	Sprite* BushRight = new Sprite();
+	BushRight->rect = { 366,613,158,96 };
+	sprites.push_back(BushRight);
+	bushright = sprites.size() - 1;
+
+	Sprite* BushLeft = new Sprite();
+	Water->rect = { 524,613,158,96 };
+	sprites.push_back(Water);
+	bushleft = sprites.size() - 1;
+
+	Sprite* BoatHouse = new Sprite();
+	BoatHouse->rect = { 747,367,207,169 };
+	sprites.push_back(BoatHouse);
+	boathouse = sprites.size() - 1;
+
+	Sprite* BoatHouse2 = new Sprite();
+	BoatHouse2->rect = { 747,367,207,169 };
+	sprites.push_back(BoatHouse2);
+	boathouse2 = sprites.size() - 1;
 
 	//GUI
 	guiTime.x = 78;
@@ -121,7 +142,13 @@ bool ModuleScene::Start()
 	playerZ = 0;
 	speed = 0;
 	startPos = 0;
-
+	clock_t initT = clock();
+	initTimer = initT;
+	minuteLap = 0;
+	secondsLap = 0;
+	miliSecondsLap = 0;
+	parallaxFactor = 300;
+	backgroundX = -200;
 	return true;
 }
 
@@ -172,11 +199,12 @@ void ModuleScene::PrintTrack()
 	int maxY = SCREEN_HEIGHT;
 
 	////draw background
-	App->renderer->Blit(background, 0, 0, &Background, 0.0f);
+	App->renderer->Blit(background, backgroundX, 0, &Background, 0.0f);
 	
 	//draw track 
 	for (int n = startPos; n < startPos + 300; n++)
 	{
+		
 		//linia actual del player
 			Line &l = lines[n%N];
 	
@@ -200,7 +228,7 @@ void ModuleScene::PrintTrack()
 		//	Color Line;
 			if (n == 0)n++;
 			Line p = lines[(n - 1) % N]; //previos line
-
+		
 			App->renderer->BlitPolygon(grass, 0, (short)p.Y, (short)p.width, 0, (short)l.Y, (short)l.width);
 			App->renderer->BlitPolygon(rumble, (short)p.X,(short)p.Y, (short)(p.W*1.2),(short)l.X,(short)l.Y,(short)(l.W*1.2));
 			App->renderer->BlitPolygon(sideline, (short)p.X, (short)p.Y, (short)(p.W*1.07), (short)l.X, (short)l.Y, (short)(l.W*1.07));
@@ -215,13 +243,27 @@ void ModuleScene::PrintTrack()
 		if (lines[n%N].id != -1)
 			lines[n%N].DrawObject(sprites[lines[n%N].id]->rect, Sprites);
 	}
-	for (int n = startPos; n < startPos+1; n++)
+	for (int n = startPos; n < startPos+2; n++)
 	{
 		if (lines[n%N].id == checkpoint)
 		{
-			secondsToQuit += 10;
+			secondsToQuit += 5;
+		}
+		if (lines[n%N].curve > 0)
+		{
+			backgroundX -= speed / (float)parallaxFactor;
+			
+		}
+		if (lines[n%N].curve < 0)
+		{
+			backgroundX += speed / (float)parallaxFactor;
+
 		}
 	}
+	/*for (int n = startPos; n < startPos + 2; n++)
+	{
+		if (lines[n%N].id != -1 && )
+	}*/
 }
 // Update: draw background
 void ModuleScene::PrintGUI()
@@ -316,22 +358,23 @@ void ModuleScene::AnimationPlayer()
 update_status ModuleScene::Update()
 {
 	
+	if (speed > 20) {
+		if (App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_DOWN || App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT)
+		{
+			playerZ += 70;
+		}
 
-	if (App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_DOWN || App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT)
-	{
-		playerZ += 70;
-	}
-
-	if (App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_DOWN || App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT)
-	{
-		playerZ -= 70;
+		if (App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_DOWN || App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT)
+		{
+			playerZ -= 70;
+		}
 	}
 	if (App->input->GetKey(SDL_SCANCODE_UP) == KEY_DOWN || App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT)
 	{
 		if (speed < MAX_SPEED) speed += ACCELERATION;
 		
 		playerX += speed;
-		
+	
 		score = score + 1;
 	}
 	else 
@@ -343,7 +386,7 @@ update_status ModuleScene::Update()
 
 	int currentCurve = lines[startPos%N].curve;
 
-	if (speed> 10)
+	if (speed> 20)
 	{
 		if (currentCurve > 3.5) playerZ -= 60;
 		else if (currentCurve > 2) playerZ -= 45;

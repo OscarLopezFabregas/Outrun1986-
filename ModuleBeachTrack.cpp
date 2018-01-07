@@ -44,11 +44,13 @@ bool ModuleBeachTrack::Start()
 		
 		if (0<i && i<550)
 		{
-			if (i % 10 == 0) {
+			if (i % 10 == 0) 
+			{
 				line.id = palm_left;
 				line.spriteX = -1.2;
 			}
-			if (i % 9 == 0) {
+			if (i % 9 == 0)
+			{
 				line.id = palm_right;
 				line.spriteX = 1.2;
 			}
@@ -86,13 +88,14 @@ bool ModuleBeachTrack::Start()
 		}
 		if (300 < i && i < 500)
 		{	
+		bool go = false;
 			float transitionValue = (float)(sin( PI*i/300) * 2750);
-			if (-0.1 < transitionValue < 0.1) go = true;
+			if (-0.1 + line.y < transitionValue < 0.1 + line.y) go = true;
 			if (go) line.y = -transitionValue;
 			if (i == 499) lastValue = line.y;
 		}
 		if (i > 499) line.y = lastValue;
-
+		
 		if (i == 575) {
 			line.id = checkpoint;
 			line.spriteX = 1;
@@ -105,15 +108,141 @@ bool ModuleBeachTrack::Start()
 		{
 			line.curve = 2.5;
 		}
+		if (400<i && i<1050)
+		{
+			if (i % 10 == 0) {
+				line.id = palm_left;
+				line.spriteX = -1.2;
+			}
+			if (i % 9 == 0) {
+				line.id = palm_right;
+				line.spriteX = 1.2;
+			}
+
+		}
+		
 		if (900 < i && i < 1500)
 		{
-			float transitionValue = (float)(sin(PI*i / 300) * 2750);
-			if (-0.1 < transitionValue < 0.1) go = true;
-			if (go)	line.y = transitionValue;
-			if (i == 1499) lastValue = line.y;
+			line.y += (float)(sin(PI*i / 300) * 2750);
+			line.curve = 1;
+			
+			if (i % 5 == 0) 
+			{
+				line.id = bushleft;
+				if(i%2 == 0) line.spriteX = -1.2;
+				if (i % 2 != 0) line.spriteX = -2;
+			}
+
+			if (i % 3 == 0)
+			{
+				line.id = bushright;
+				if (i % 2 == 0) line.spriteX = 1.2;
+				if (i % 2 != 0) line.spriteX = 2;
+			}
 		}
-		if (i > 1499) line.y = lastValue;
+		 
+		if (1505<i && i < 2000) 
+		{
+			if (i % 5 == 0)
+			{
+				line.id = bushleft;
+				if (i % 2 == 0) line.spriteX = -1.2;
+				if (i % 2 != 0) line.spriteX = -2;
+			}
+
+			if (i % 6 == 0)
+			{
+				line.id = bushright;
+				if (i % 2 == 0) line.spriteX = 1.2;
+				if (i % 2 != 0) line.spriteX = 2;
+			}
+	}
+		if (2000 < i && i < 2400)
+		{
+			line.curve = -2;
+			if (i % 15 == 0) 
+			{
+				line.id = boathouse;
+				line.spriteX = -2;
+			}
+		}
+		if (i == 1677) {
+			line.id = checkpoint;
+			line.spriteX = 1;
+		}
+
+		else if (i > 3100 && i < 3200)
+		{
+			line.curve = 3;
+			
+				if (i % 5 == 0)
+				{
+					line.id = bushleft;
+					if (i % 2 == 0) line.spriteX = -1.2;
+					if (i % 2 != 0) line.spriteX = -2;
+				}
+
+				if (i % 6 == 0)
+				{
+					line.id = bushright;
+					if (i % 2 == 0) line.spriteX = 1.2;
+					if (i % 2 != 0) line.spriteX = 2;
+				}
+			
+		}
+		else if (i > 2400 && i < 2800)
+		{
+			line.curve = -4;
+			if (i % 10 == 0)
+			{
+				line.id = palm_left;
+				line.spriteX = -1.2;
+			}
+			if (i % 9 == 0)
+			{
+				line.id = palm_right;
+				line.spriteX = 1.2;
+			}
+		}
+
+		if (i == 2677) {
+			line.id = checkpoint;
+			line.spriteX = 1;
+		}
+
+
+		else if (i > 3200 && i < 3400) line.curve = 1;
+		else if (i > 3400 && i < 3500)
+		{
+			line.curve = -4;
+			if (i % 10 == 0)
+			{
+				line.id = palm_left;
+				line.spriteX = -1.2;
+			}
+			if (i % 9 == 0)
+			{
+				line.id = palm_right;
+				line.spriteX = 1.2;
+			}
+		}
 	
+		else if (i > 3500 && i < 3900) {
+			line.curve = 2;
+			if (i % 10 == 0)
+			{
+				line.id = palm_left;
+				line.spriteX = -1.2;
+			}
+			if (i % 9 == 0)
+			{
+				line.id = palm_right;
+				line.spriteX = 1.2;
+			}
+		}
+
+		else if (i > 4000 && i < 4200)  line.curve = -2;
+		else if (i > 4250 && i < 4500)  line.curve = 4;
 
 		lines.push_back(line);
 	}

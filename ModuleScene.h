@@ -84,7 +84,12 @@ public:
 	int column;
 	int grandstand;
 	int checkpoint;
-
+	int water;
+	int bushright;
+	int bushleft;
+	int boathouse;
+	int boathouse2;
+	int offs;
 	int secondsPassed;
 	int secondsToQuit;
 	int secondsLap;
@@ -94,6 +99,8 @@ public:
 	int minuteLap;
 	int score;
 	int speed;
+	int backgroundX;
+	int parallaxFactor;
 
 	std::vector<Line> lines;
 private:
