@@ -102,7 +102,7 @@ bool ModulePlayer::CleanUp()
 	return true;
 }
 
-void ModulePlayer::DetectCollision(const SDL_Rect r)
+void const ModulePlayer::DetectCollision(const SDL_Rect r)
 {
 	if (!(collider.x > r.x + r.w || collider.x + collider.w < r.x || collider.y > r.y + r.h || collider.y + collider.h < r.y))
 	{

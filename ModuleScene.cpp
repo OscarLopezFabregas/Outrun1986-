@@ -183,13 +183,6 @@ void ModuleScene::TimeManager() {
 void ModuleScene::PrintTrack()
 {
 
-	//CREA BUCLE PARA QUE LA PISTA SEA INFINITA
-   // while (pos >= N * 200) pos -= N*SEGMENT_LENGTH;
-	//while (pos < 0) pos += N*SEGMENT_LENGTH;
-	//while (playerX >= N * 200) playerX -= N*SEGMENT_LENGTH;
-	//while (playerX < 0) playerX += N*SEGMENT_LENGTH;
-
-
 	float x = 0; 
 	float dx = 0;
 	int segL = SEGMENT_LENGTH;
@@ -208,7 +201,7 @@ void ModuleScene::PrintTrack()
 		//linia actual del player
 			Line &l = lines[n%N];
 	
-			l.project(playerZ - x , camH, playerX /*- (n >= N ? N*segL : 0)*/);
+			l.project(playerZ - x , camH, playerX);
 
 			x += dx;
 			dx += l.curve;

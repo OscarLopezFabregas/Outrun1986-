@@ -18,7 +18,7 @@ public:
 	update_status Update();
 	bool CleanUp();
 
-	void DetectCollision(const SDL_Rect r);
+	void const DetectCollision(const SDL_Rect r);
 public:
 
 	SDL_Texture* graphics = nullptr;

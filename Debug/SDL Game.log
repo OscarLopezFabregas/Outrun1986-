@@ -1,3 +1,33 @@
-﻿  ModulePlayer.cpp
+﻿  ModuleBeachTrack.cpp
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\line.h(10): warning C4099: 'SDL_Texture': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+  c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\moduleplayer.h(9): note: vea la declaración de 'SDL_Texture'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(50): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(55): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(67): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(77): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(93): warning C4804: '<': uso no seguro del tipo 'bool' en la operación
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(115): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(119): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(132): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(139): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(149): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(156): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(181): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(188): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(199): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(204): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(221): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(226): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(235): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulebeachtrack.cpp(240): warning C4305: '=': truncamiento de 'double' a 'float'
+  Generando código...
+  Compilando...
+  ModuleScene.cpp
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\line.h(10): warning C4099: 'SDL_Texture': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+  c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\sdl\include\sdl_render.h(128): note: vea la declaración de 'SDL_Texture'
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulescene.cpp(211): warning C4244: 'argumento': conversión de 'float' a 'const int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulescene.cpp(237): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\modulescene.cpp(388): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+  Generando código...
   SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Debug\SDL Game - Master 1 Handout.exe
   SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Debug\SDL Game - Master 1 Handout.pdb (Partial PDB)

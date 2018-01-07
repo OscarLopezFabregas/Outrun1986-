@@ -1,40 +1,10 @@
-﻿  Application.cpp
-  ModuleBeachTrack.cpp
-c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\Line.h(10): warning C4099: 'SDL_Texture': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
-  c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\ModulePlayer.h(9): note: vea la declaración de 'SDL_Texture'
-ModuleBeachTrack.cpp(50): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(55): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(67): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(77): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(93): warning C4804: '<': uso no seguro del tipo 'bool' en la operación
-ModuleBeachTrack.cpp(115): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(119): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(132): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(139): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(149): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(156): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(181): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(188): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(199): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(204): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(221): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(226): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(235): warning C4305: '=': truncamiento de 'double' a 'float'
-ModuleBeachTrack.cpp(240): warning C4305: '=': truncamiento de 'double' a 'float'
-  ModuleFadeToBlack.cpp
-  ModulePlayer.cpp
-  ModuleScene.cpp
-c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\Line.h(10): warning C4099: 'SDL_Texture': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
-  c:\users\pc\desktop\master en creació i disseny de videojocs\outrun1986-\sdl\include\SDL_render.h(128): note: vea la declaración de 'SDL_Texture'
-ModuleScene.cpp(211): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-ModuleScene.cpp(237): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-ModuleScene.cpp(388): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-  ModuleSegaIntro.cpp
-ModuleSegaIntro.cpp(56): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+﻿  ModuleRender.cpp
+ModuleRender.cpp(117): warning C4838: la conversión de 'int' en 'short' requiere una conversión de restricción
+ModuleRender.cpp(118): warning C4838: la conversión de 'const int' en 'short' requiere una conversión de restricción
   Generando código
-  83 of 636 functions (13.1%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    6 functions had inline decision re-evaluated but remain unchanged
+  2 of 636 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada
   SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Release\SDL Game - Master 1 Handout.exe
   SDL Game.vcxproj -> C:\Users\PC\Desktop\Master en Creació i Disseny de Videojocs\Outrun1986-\Release\SDL Game - Master 1 Handout.pdb (Full PDB)

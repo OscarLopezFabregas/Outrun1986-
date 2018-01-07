@@ -53,19 +53,7 @@ update_status ModuleRender::Update()
 {
 	// debug camera
 	int speed = 1;
-	//NO HO NECESSITEM
-	/*if(App->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT)
-		App->renderer->camera.y += speed;
-
-	if(App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT)
-		App->renderer->camera.y -= speed;
-
-	if(App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT)
-		App->renderer->camera.x += speed;
-
-	if(App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT)
-		App->renderer->camera.x -= speed;*/
-
+	
 	return UPDATE_CONTINUE;
 }
 
@@ -123,7 +111,7 @@ bool ModuleRender::Blit(SDL_Texture* texture, int x, int y, SDL_Rect* section, f
 	return ret;
 }
 
-bool ModuleRender::BlitPolygon(Color c, int x1, int y1, int w1, int x2, int y2, int w2)
+bool const ModuleRender::BlitPolygon(Color c, int const x1, int const y1, int const w1, int const x2, int const y2, int const w2)
 {
 	bool ret = true;
 	short s[4] = { x1 - (w1),x1 + (w1),x2 + (w2), x2 - (w2) };

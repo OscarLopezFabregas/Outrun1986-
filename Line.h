@@ -41,7 +41,7 @@ public:
 	};
 
 	//from world to screen coordinates;
-	void project(int camX, int camY, int camZ)
+	void const project(int const camX, int const camY, int const camZ)
 	{
 		if (z < camZ) return;
 		scale = camD / (z - camZ);
