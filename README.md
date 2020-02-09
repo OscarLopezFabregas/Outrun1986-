@@ -45,6 +45,17 @@ Some logic and functions would obviously need to be added, but even though I kne
  
  The game will finish when you run out of time.
 
+ # Demo
+
+ Tested on Ubuntu 19.10
+
+ ```
+ make dep
+ make compile run
+ ```
+
+ ![](doc/demo.png)
+
 # Acknowledgements
  * [http://www.extentofthejam.com/pseudo/]
  * [https://www.youtube.com/watch?v=N60lBZDEwJ8]
